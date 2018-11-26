@@ -1,13 +1,6 @@
 # Astronomy Project
 This project by the SDSU vr club is designed to help students learn astronomy concepts in virtual reality
-
-
-
-
-
-
-#instructions for use
-This test was designed to teach how to use Github as a means of collaborating on large group projects without creating conflicts.
+Instructions for use 
 
 Step 1: Clone this repo by clicking the green clone button on the main page and copying the URL dsiplayed.
 
