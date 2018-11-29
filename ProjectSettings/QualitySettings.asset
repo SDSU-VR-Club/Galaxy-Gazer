@@ -122,9 +122,9 @@ QualitySettings:
     shadowmaskMode: 1
     blendWeights: 2
     textureQuality: 0
-    anisotropicTextures: 0
-    antiAliasing: 0
-    softParticles: 0
+    anisotropicTextures: 2
+    antiAliasing: 4
+    softParticles: 1
     softVegetation: 1
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
@@ -210,4 +210,6 @@ QualitySettings:
     asyncUploadBufferSize: 4
     resolutionScalingFixedDPIFactor: 1
     excludedTargetPlatforms: []
-  m_PerPlatformDefaultQuality: {}
+  m_PerPlatformDefaultQuality:
+    Android: 0
+    Standalone: 0
