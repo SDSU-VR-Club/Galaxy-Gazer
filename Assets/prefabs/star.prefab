@@ -96,7 +96,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddbcd9adf9a551e4d9ca94ad312b616e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Brightness: 10
+  Brightness: 2
+  minimumBrightness: 0.05
+  scaleRate: 0.2
   camera: {fileID: 0}
 --- !u!123 &123001588063881660
 LensFlare:
@@ -105,7 +107,7 @@ LensFlare:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1339055033768952}
   m_Enabled: 1
-  m_Flare: {fileID: 12100000, guid: 8541d94808d5849d8bfa480259334205, type: 2}
+  m_Flare: {fileID: 12100000, guid: e59f068002a7b47858274b3c71e10ea7, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Brightness: 0.32
   m_FadeSpeed: 3.97
