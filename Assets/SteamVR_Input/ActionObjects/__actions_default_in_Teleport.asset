@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeTolerance: 0.000001
   fullPath: /actions/default/in/Teleport
-  actionSet: {fileID: 11400000, guid: d81687b76b41c8a4c9a6d1c807dd922e, type: 2}
+  actionSet: {fileID: 11400000, guid: 39941115593f38f4da5185b136d53ec8, type: 2}
   direction: 0

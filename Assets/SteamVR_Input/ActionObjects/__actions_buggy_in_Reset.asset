@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -13,5 +13,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   changeTolerance: 0.000001
   fullPath: /actions/buggy/in/Reset
-  actionSet: {fileID: 11400000, guid: be83d4b221f564749abad065b9c32ce1, type: 2}
+  actionSet: {fileID: 11400000, guid: 68c7c95d7b9925d499706a1e9ec553b9, type: 2}
   direction: 0
