@@ -22,6 +22,7 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
     [Space(10)]
 
     [Header("Column of the star's color")]
+    public bool HexadecimalColor;
     public int RcolorColumn;
     public int GcolorColumn;
     public int BcolorColumn;
@@ -47,6 +48,7 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
             float r = 0;
             float g = 0;
             float b = 0;
+            Color hexcolor;
 
             string[] row = data[i].Split(new char[] { ',' });
             //makestar
@@ -64,12 +66,22 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
             float.TryParse(row[DiamaterColumn - 1], out d);
             tempStar.transform.localScale = new Vector3(d, d, d);
             //star color
-            float.TryParse(row[RcolorColumn - 1], out r);
-            float.TryParse(row[GcolorColumn - 1], out g);
-            float.TryParse(row[BcolorColumn - 1], out b);
             Material starMaterial = new Material(Shader.Find("Standard"));
             tempStar.GetComponent<Renderer>().material = starMaterial;
-            starMaterial.SetColor("_Color", new Color(r, g, b));
+            if (HexadecimalColor)
+            {
+                ColorUtility.TryParseHtmlString(row[RcolorColumn - 1], out hexcolor);
+                starMaterial.SetColor("_Color", hexcolor);
+            }
+            else
+            {
+                float.TryParse(row[RcolorColumn - 1], out r);
+                float.TryParse(row[GcolorColumn - 1], out g);
+                float.TryParse(row[BcolorColumn - 1], out b);
+                starMaterial.SetColor("_Color", new Color(r, g, b));
+            }
+
+
         }
 	}
 	
