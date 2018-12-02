@@ -319,7 +319,7 @@ MonoBehaviour:
   Ycolumn: 3
   Zcolumn: 4
   DiamaterColumn: 5
-  HexadecimalColor: 1
+  HexadecimalColor: 0
   RcolorColumn: 6
   GcolorColumn: 5
   BcolorColumn: 5
