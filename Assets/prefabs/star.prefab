@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 123001588063881660}
   - component: {fileID: 114113171119785002}
   - component: {fileID: 135441638960818100}
+  - component: {fileID: 114917297870619232}
   m_Layer: 8
   m_Name: star
   m_TagString: Untagged
@@ -101,6 +102,17 @@ MonoBehaviour:
   minimumBrightness: 0.05
   scaleRate: 0.1
   camera: {fileID: 0}
+--- !u!114 &114917297870619232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1339055033768952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f4d3d7975e90464d956889f761daaa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!123 &123001588063881660
 LensFlare:
   m_ObjectHideFlags: 1

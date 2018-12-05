@@ -22,7 +22,7 @@ namespace Valve.VR.InteractionSystem
                 if (Physics.Raycast(shootTransform.position, shootTransform.forward,out hit))
                 {
                     print("hit");
-                    hit.collider.gameObject.GetComponent<LensFlare>().color = green;
+                    hit.collider.gameObject.GetComponent<StarBehavior>().select();
                 }
             }
 
