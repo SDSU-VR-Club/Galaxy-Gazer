@@ -14,11 +14,26 @@ namespace Valve.VR.InteractionSystem
             green = new Color(0, 1, 0);
         }
 
+        private void LateUpdate()
+        {
+            RaycastHit hit;
+            if (Physics.Raycast(shootTransform.position, shootTransform.forward, out hit))
+            {
+                hit.collider.gameObject.GetComponent<StarBehavior>().highlight();
+                GetComponentInChildren<LineRenderer>().startColor = Color.blue;
+                GetComponentInChildren<LineRenderer>().endColor = Color.blue;
+            }
+            else
+            {
+                GetComponentInChildren<LineRenderer>().startColor = Color.white;
+            }
+        }
         // Update is called once per frame
         void Update() {
+            RaycastHit hit;
             if (GetComponent<Hand>().grabPinchAction.GetLastStateDown(GetComponent<Hand>().handType))
             {
-                RaycastHit hit;
+                
                 if (Physics.Raycast(shootTransform.position, shootTransform.forward,out hit))
                 {
                     print("hit");
