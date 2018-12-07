@@ -113,6 +113,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f4d3d7975e90464d956889f761daaa5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  source: {fileID: 0}
+  GoodButton: {fileID: 0}
+  BadButton: {fileID: 0}
 --- !u!123 &123001588063881660
 LensFlare:
   m_ObjectHideFlags: 1
@@ -138,5 +141,5 @@ SphereCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.5
   m_Center: {x: 0, y: 0, z: 0}

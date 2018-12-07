@@ -5,6 +5,8 @@ using UnityEngine;
 public class StarManager : MonoBehaviour {
     List<Transform> stars;
     public float score = 0;
+    public AudioSource badSound;
+    public AudioSource goodSound;
     // Use this for initialization
     void Start () {
 		
@@ -37,11 +39,16 @@ public class StarManager : MonoBehaviour {
         if (closestStar==starToCheck)
         {
             starToCheck.success();
+            goodSound.Play();
             stars.Remove(closestStar.transform);
+            if (stars.Count == 0)
+                GetComponent<UIManager>().gameOver((int) score);
             return;
+
         }
 
         starToCheck.fail();
+        badSound.Play();
         score++;
 
     }

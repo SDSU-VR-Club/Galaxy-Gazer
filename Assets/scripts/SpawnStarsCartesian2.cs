@@ -34,8 +34,8 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
     [Header("Star prefab")]
     public GameObject DefaultStar;
     string[] data;
-
-
+    public float starScaleMultiplier;
+    public float distanceExagerationMultiplier;
     
 
         void Start ()
@@ -74,9 +74,10 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
             float.TryParse(row[Ycolumn - 1], out y);
             float.TryParse(row[Zcolumn - 1], out z);
             tempStar.transform.position = new Vector3(x,y,z);
+            tempStar.transform.position *= distanceExagerationMultiplier;
             //star diameter
             float.TryParse(row[DiamaterColumn - 1], out d);
-            tempStar.transform.localScale = new Vector3(d, d, d);
+            tempStar.transform.localScale = new Vector3(d, d, d)*starScaleMultiplier;
             //star color
             if (UseColor)
             {

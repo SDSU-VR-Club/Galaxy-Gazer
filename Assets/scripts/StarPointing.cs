@@ -19,9 +19,12 @@ namespace Valve.VR.InteractionSystem
             RaycastHit hit;
             if (Physics.Raycast(shootTransform.position, shootTransform.forward, out hit))
             {
-                hit.collider.gameObject.GetComponent<StarBehavior>().highlight();
-                GetComponentInChildren<LineRenderer>().startColor = Color.blue;
-                GetComponentInChildren<LineRenderer>().endColor = Color.blue;
+                if (hit.collider.gameObject.GetComponent<StarBehavior>() != null)
+                {
+                    hit.collider.gameObject.GetComponent<StarBehavior>().highlight();
+                    GetComponentInChildren<LineRenderer>().startColor = Color.blue;
+                    GetComponentInChildren<LineRenderer>().endColor = Color.blue;
+                }
             }
             else
             {
@@ -36,8 +39,11 @@ namespace Valve.VR.InteractionSystem
                 
                 if (Physics.Raycast(shootTransform.position, shootTransform.forward,out hit))
                 {
-                    print("hit");
-                    hit.collider.gameObject.GetComponent<StarBehavior>().select();
+                    if (hit.collider.gameObject.GetComponent<StarBehavior>() != null)
+                    {
+                        print("hit");
+                        hit.collider.gameObject.GetComponent<StarBehavior>().select();
+                    }
                 }
             }
 
