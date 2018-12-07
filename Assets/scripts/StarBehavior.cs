@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StarBehavior : MonoBehaviour {
+    public AudioSource source;      //Added
+    public AudioClip GoodButton;    //Added
+    public AudioClip BadButton;     //Added
     bool finished = false;
     bool failing = false;
     Color originalColor;
@@ -28,6 +31,7 @@ public class StarBehavior : MonoBehaviour {
     {
         GetComponent<MeshRenderer>().material.color=Color.green;
         GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.green);
+        source.PlayOneShot(GoodButton);     //Added
         finished = true;
     }
     public void fail()
@@ -41,6 +45,7 @@ public class StarBehavior : MonoBehaviour {
         
         GetComponent<MeshRenderer>().material.color = Color.red;
         GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.red);
+        source.PlayOneShot(BadButton);     //Added
         yield return new WaitForSeconds(2);
         GetComponent<MeshRenderer>().material.color = originalColor;
         GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", originalColor); 
