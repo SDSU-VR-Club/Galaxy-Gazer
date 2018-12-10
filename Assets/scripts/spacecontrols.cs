@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Valve.VR;
+using UnityEngine.SceneManagement;
 
 public class spacecontrols : MonoBehaviour
 {
@@ -12,15 +13,27 @@ public class spacecontrols : MonoBehaviour
     public SteamVR_Action_Vector2 touchPadAction;
     public GameObject left;
     public GameObject right;
-    
+    public float shrinkspeed;
+    public float ShrinkPercent;
     void Start()
     {
-
+        ShrinkPercent = 1;
     }
 
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene("KainScene");
+        }
+
+        if (ShrinkPercent > 0.01f)
+            ShrinkPercent -= Time.deltaTime * shrinkspeed;
+        else
+            ShrinkPercent = 0.01f;
+        
+
         Rdirection = right.transform.rotation * Vector3.forward;
         Ldirection = left.transform.rotation * Vector3.forward;
 
@@ -29,13 +42,13 @@ public class spacecontrols : MonoBehaviour
 
         if (LtouchpadValue.y != 0)
         {
-            transform.position += Ldirection * speed * LtouchpadValue.y;
+            transform.position += Ldirection * speed * LtouchpadValue.y * ShrinkPercent;
             print("Lyo");
         }
 
         if (RtouchpadValue.y != 0)
         {
-            transform.position += Rdirection * speed * RtouchpadValue.y;
+            transform.position += Rdirection * speed * RtouchpadValue.y  * ShrinkPercent;
             print("Ryo");
         }
 

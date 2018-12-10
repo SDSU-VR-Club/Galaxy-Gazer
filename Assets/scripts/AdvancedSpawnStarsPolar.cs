@@ -30,7 +30,7 @@ public class AdvancedSpawnStarsPolar : MonoBehaviour {
             STARSHOOTER.transform.eulerAngles = new Vector3(0, longitude*-6.5f, latitude);
             tempStar.transform.localPosition = new Vector3(distance, 0, 0);
             tempStar.transform.parent = transform;
-            tempStar.transform.localScale = new Vector3(diameter, diameter, diameter);
+            tempStar.transform.localScale = new Vector3(10, 10, 10);
             Material starMaterial = new Material(Shader.Find("Standard"));
             tempStar.GetComponent<Renderer>().material = starMaterial;
             starMaterial.SetColor("_Color", new Color(1, 1, 1));
