@@ -9,7 +9,7 @@ public class flareScaler : MonoBehaviour {
     public Transform camera;
 	// Use this for initialization
 	void Start () {
-		
+        camera = FindObjectOfType<Camera>().transform;
 	}
 	
 	// Update is called once per frame
