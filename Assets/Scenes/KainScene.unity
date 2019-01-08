@@ -286,6 +286,64 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 36739965}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &69545689
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 69545691}
+  - component: {fileID: 69545690}
+  m_Layer: 0
+  m_Name: Cassiopeia
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &69545690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 69545689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba6214deb0119e4e943291d8d3391ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starData: {fileID: 4900000, guid: 8771770a29ddb6a4182fcebfe9e5a888, type: 3}
+  NameColumn: 1
+  Xcolumn: 2
+  Ycolumn: 3
+  Zcolumn: 4
+  DiamaterColumn: 5
+  SetDiameter: 0
+  Diameter: 1
+  UseColor: 1
+  RcolorColumn: 0
+  GcolorColumn: 0
+  BcolorColumn: 0
+  UseHexadecimalColor: 1
+  HexColumn: 6
+  DefaultStar: {fileID: 1054023720075126, guid: afff09474728e3b4e92c71b51ce7baed,
+    type: 2}
+  starScaleMultiplier: 1
+  distanceExagerationMultiplier: 1
+--- !u!4 &69545691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 69545689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &108621219
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,7 +361,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &108621220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -512,6 +570,64 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 535797689}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &548465168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 548465170}
+  - component: {fileID: 548465169}
+  m_Layer: 0
+  m_Name: BigDipper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &548465169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548465168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba6214deb0119e4e943291d8d3391ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starData: {fileID: 4900000, guid: 95f330cce9bdc82438f911550aa0da29, type: 3}
+  NameColumn: 1
+  Xcolumn: 2
+  Ycolumn: 3
+  Zcolumn: 4
+  DiamaterColumn: 5
+  SetDiameter: 0
+  Diameter: 1
+  UseColor: 1
+  RcolorColumn: 0
+  GcolorColumn: 0
+  BcolorColumn: 0
+  UseHexadecimalColor: 1
+  HexColumn: 6
+  DefaultStar: {fileID: 1054023720075126, guid: afff09474728e3b4e92c71b51ce7baed,
+    type: 2}
+  starScaleMultiplier: 1
+  distanceExagerationMultiplier: 1
+--- !u!4 &548465170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 548465168}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &611695425
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,13 +856,129 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 766365697}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ff9dd638bbdd665499142daac42d5061, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.02
   ShrinkPercent: 0
+--- !u!1 &934746968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 934746970}
+  - component: {fileID: 934746969}
+  m_Layer: 0
+  m_Name: Orion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &934746969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 934746968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba6214deb0119e4e943291d8d3391ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starData: {fileID: 4900000, guid: 22c400c5943101e409c688360b0947a3, type: 3}
+  NameColumn: 1
+  Xcolumn: 2
+  Ycolumn: 3
+  Zcolumn: 4
+  DiamaterColumn: 5
+  SetDiameter: 0
+  Diameter: 1
+  UseColor: 1
+  RcolorColumn: 0
+  GcolorColumn: 0
+  BcolorColumn: 0
+  UseHexadecimalColor: 1
+  HexColumn: 6
+  DefaultStar: {fileID: 1054023720075126, guid: afff09474728e3b4e92c71b51ce7baed,
+    type: 2}
+  starScaleMultiplier: 1
+  distanceExagerationMultiplier: 1
+--- !u!4 &934746970
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 934746968}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &993581633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 993581635}
+  - component: {fileID: 993581634}
+  m_Layer: 0
+  m_Name: LittleDipper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &993581634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993581633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ba6214deb0119e4e943291d8d3391ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starData: {fileID: 4900000, guid: fcbb1540ca545dd4bab06971ab26945e, type: 3}
+  NameColumn: 1
+  Xcolumn: 2
+  Ycolumn: 3
+  Zcolumn: 4
+  DiamaterColumn: 5
+  SetDiameter: 0
+  Diameter: 1
+  UseColor: 1
+  RcolorColumn: 0
+  GcolorColumn: 0
+  BcolorColumn: 0
+  UseHexadecimalColor: 1
+  HexColumn: 6
+  DefaultStar: {fileID: 1054023720075126, guid: afff09474728e3b4e92c71b51ce7baed,
+    type: 2}
+  starScaleMultiplier: 1
+  distanceExagerationMultiplier: 1
+--- !u!4 &993581635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 993581633}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1351404439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,7 +1312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1598947669
 MonoBehaviour:
   m_ObjectHideFlags: 0

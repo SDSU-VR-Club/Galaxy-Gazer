@@ -17,9 +17,10 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
     public int Ycolumn;
     public int Zcolumn;
     [Space(10)]
-
     [Header("Column of the star's diameter")]
     public int DiamaterColumn;
+    public bool SetDiameter;
+    public float Diameter;
     [Space(10)]
 
     [Header("Column of the star's color")]
@@ -36,7 +37,6 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
     string[] data;
     public float starScaleMultiplier;
     public float distanceExagerationMultiplier;
-    
 
         void Start ()
 	{
@@ -76,8 +76,17 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
             tempStar.transform.position = new Vector3(x,y,z);
             tempStar.transform.position *= distanceExagerationMultiplier;
             //star diameter
-            float.TryParse(row[DiamaterColumn - 1], out d);
-            tempStar.transform.localScale = new Vector3(d, d, d)*starScaleMultiplier;
+            if (!SetDiameter)
+            {
+                float.TryParse(row[DiamaterColumn - 1], out d);
+                tempStar.transform.localScale = new Vector3(d, d, d) * starScaleMultiplier;
+            }
+            else
+            {
+                tempStar.transform.localScale = new Vector3(Diameter, Diameter, Diameter) * starScaleMultiplier;
+            }
+
+
             //star color
             if (UseColor)
             {
@@ -118,13 +127,6 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
                     }
                 }
             }
-
         }
-	}
-
-    
-    void Update ()
-	{
-
 	}
 }
