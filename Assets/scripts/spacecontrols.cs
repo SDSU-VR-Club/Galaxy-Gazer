@@ -25,7 +25,7 @@ public class spacecontrols : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene("KainScene");
+            //SceneManager.LoadScene("KainScene");
         }
 
         if (ShrinkPercent > 0.01f)

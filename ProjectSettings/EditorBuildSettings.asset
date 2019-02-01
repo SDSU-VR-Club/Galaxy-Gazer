@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/SecondBuildScene.unity
+    guid: 4adbe8a3d9d0f9943add2d2062e03ac4
+  - enabled: 1
     path: Assets/Scenes/RealSkyboxScene.unity
     guid: 0fe527079e32c1e47afda5bbaed95592
   - enabled: 1

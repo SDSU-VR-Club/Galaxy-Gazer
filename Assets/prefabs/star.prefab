@@ -123,6 +123,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Flare: {fileID: 123485955919214854}
   mainCam: {fileID: 0}
+  dampening: 1
+  minimumBrightness: 0.2
 --- !u!123 &123485955919214854
 LensFlare:
   m_ObjectHideFlags: 1
