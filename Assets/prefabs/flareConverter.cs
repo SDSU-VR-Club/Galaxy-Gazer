@@ -17,6 +17,7 @@ public class flareConverter : MonoBehaviour {
             
             first = false;
         }
-
-	}
+        GetComponent<LensFlare>().color = GetComponent<MeshRenderer>().material.color;
+        GetComponent<LensFlare>().brightness = transform.localScale.x;
+    }
 }
