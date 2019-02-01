@@ -6,6 +6,7 @@ public class ExpandStar : MonoBehaviour {
 
     public GameObject player;
     public float speed;
+    public float acceleration;
     Transform[] stars;
     public Vector3 average;
     int i;
@@ -17,6 +18,12 @@ public class ExpandStar : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+        speed *= acceleration;
+        if(speed > 4)
+        {
+            speed = 0;
+            acceleration = 1;
+        }
 
         for (i = 0; i < stars.Length; i++)
         {
