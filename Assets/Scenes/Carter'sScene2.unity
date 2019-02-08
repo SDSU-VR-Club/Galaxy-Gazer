@@ -2362,7 +2362,7 @@ Camera:
   field of view: 89.6
   orthographic: 0
   orthographic size: 5
-  m_Depth: 0
+  m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 0
@@ -3872,7 +3872,7 @@ Prefab:
     - target: {fileID: 20189653548703298, guid: 69eb05b027c552d4dade1ca706f23d36,
         type: 2}
       propertyPath: m_ClearFlags
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4629913156655828, guid: 69eb05b027c552d4dade1ca706f23d36, type: 2}
       propertyPath: m_LocalRotation.w
@@ -3881,7 +3881,7 @@ Prefab:
     - target: {fileID: 20165659090590184, guid: 69eb05b027c552d4dade1ca706f23d36,
         type: 2}
       propertyPath: m_ClearFlags
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 20165659090590184, guid: 69eb05b027c552d4dade1ca706f23d36,
         type: 2}
@@ -3892,6 +3892,11 @@ Prefab:
         type: 2}
       propertyPath: m_CullingMask.m_Bits
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 20165659090590184, guid: 69eb05b027c552d4dade1ca706f23d36,
+        type: 2}
+      propertyPath: m_Depth
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 69eb05b027c552d4dade1ca706f23d36, type: 2}
