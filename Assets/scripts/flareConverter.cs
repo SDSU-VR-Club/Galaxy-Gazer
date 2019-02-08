@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//carter code
 public class flareConverter : MonoBehaviour {
     bool first = true;
 	// Use this for initialization
@@ -12,11 +12,7 @@ public class flareConverter : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (first)
-        {
-            
-            first = false;
-        }
+        //changes the color of the light from a star to be the same as its material color
         GetComponent<LensFlare>().color = GetComponent<MeshRenderer>().material.color;
         //GetComponent<LensFlare>().brightness = transform.localScale.x;
        

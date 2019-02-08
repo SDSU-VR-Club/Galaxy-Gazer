@@ -1,6 +1,6 @@
 ﻿﻿using UnityEngine;
 using System.Collections;
-
+//kain kode
 public class AdvancedSpawnStarsPolar : MonoBehaviour {
 
     public GameObject STARSHOOTER;

@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//see Carter for more info
 public class starRotation : MonoBehaviour {
     public Vector3 rotationPerFrame;
 	// Use this for initialization

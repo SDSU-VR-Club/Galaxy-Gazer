@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//see Carter for more info
 namespace Valve.VR.InteractionSystem
 {
     [RequireComponent(typeof(Hand))]
     public class StarPointing : MonoBehaviour {
+        //where the hand beam points from
         public Transform shootTransform;
         Hand myHand;
         Color green;
@@ -13,7 +15,7 @@ namespace Valve.VR.InteractionSystem
             myHand = GetComponent<Hand>();
             green = new Color(0, 1, 0);
         }
-
+        //shoots beam to highlight hovered stars
         private void LateUpdate()
         {
             RaycastHit hit;
@@ -31,7 +33,7 @@ namespace Valve.VR.InteractionSystem
                 GetComponentInChildren<LineRenderer>().startColor = Color.white;
             }
         }
-        // Update is called once per frame
+        //Called on trigger press to select a star if pointed one is being pointed at
         void Update() {
             RaycastHit hit;
             if (GetComponent<Hand>().grabPinchAction.GetLastStateDown(GetComponent<Hand>().handType))
@@ -41,7 +43,6 @@ namespace Valve.VR.InteractionSystem
                 {
                     if (hit.collider.gameObject.GetComponent<StarBehavior>() != null)
                     {
-                        print("hit");
                         hit.collider.gameObject.GetComponent<StarBehavior>().select();
                     }
                 }

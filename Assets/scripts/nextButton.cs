@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+//carter code
+//UI code used to cycle through different possible constellations
 public class nextButton : MonoBehaviour {
     public TextAsset[] constellations;
     int currentConst;

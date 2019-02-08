@@ -1,6 +1,6 @@
 ﻿﻿using UnityEngine;
 using System.Collections;
-
+//kain code
 public class SpawnStarsCartesian : MonoBehaviour {
 
     public TextAsset starData;

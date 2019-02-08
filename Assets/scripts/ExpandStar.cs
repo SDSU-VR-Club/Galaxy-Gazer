@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//kain kode
 public class ExpandStar : MonoBehaviour {
 
     public GameObject player;

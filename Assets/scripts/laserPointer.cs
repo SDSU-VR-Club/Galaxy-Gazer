@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//carter code
+//drives the linerenderer to always point in front of the hand
 [RequireComponent(typeof(LineRenderer))]
 public class laserPointer : MonoBehaviour {
     LineRenderer lr;

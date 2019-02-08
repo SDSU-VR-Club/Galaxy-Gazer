@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+//see Carter for more info
 public class StarManager : MonoBehaviour {
+    //poulated on the first selection with all stars in the scene
     List<Transform> stars;
     public float score = 0;
     public AudioSource badSound;
@@ -19,12 +20,14 @@ public class StarManager : MonoBehaviour {
 
     public void checkClosest(StarBehavior starToCheck)
     {
+        //initialize list of star transforms
         if (stars == null) {
             stars = new List<Transform>();
             var starbehaviors = FindObjectsOfType<StarBehavior>();
             foreach (StarBehavior a in starbehaviors)
                 stars.Add(a.transform);
                 }
+        //sort for the closest star
         float lowest = Mathf.Infinity;
         StarBehavior closestStar=null;
         foreach(Transform a in stars)
@@ -36,8 +39,10 @@ public class StarManager : MonoBehaviour {
                 closestStar = a.GetComponent<StarBehavior>();
             }
         }
+        //compare closest star with user selection to determine success
         if (closestStar==starToCheck)
         {
+            //in the event of a success
             starToCheck.success();
             goodSound.Play();
             stars.Remove(closestStar.transform);
@@ -46,7 +51,7 @@ public class StarManager : MonoBehaviour {
             return;
 
         }
-
+        //in the event of a failure
         starToCheck.fail();
         badSound.Play();
         score++;

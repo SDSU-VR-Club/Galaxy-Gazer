@@ -1,6 +1,6 @@
 ﻿﻿using UnityEngine;
 using System.Collections;
-
+//kain kode
 //[ExecuteInEditMode]
 public class SpawnStarsCartesian2 : MonoBehaviour {
 
