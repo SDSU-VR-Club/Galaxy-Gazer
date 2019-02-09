@@ -28,4 +28,19 @@ April 19 feature freeze and review
 April 25 launch
 
 # Project part 1 
-This part is focused on having students determine which star is closest to others while moving
+This part is focused on having students determine which star is closest to others while moving to look at the perspective movement of the stars.
+Task list for part 1:
+stop star flares from rotating when the camera moves.
+spawn the constellations in front of the player at eye level
+increase collider size on stars as they get further away
+arrange constellations sequentially
+tilt the skybox to the correct angle.
+
+# Project part 2
+This part is focused on showing the ellipse like movement of stars viewed from earth to determine their distance from the player
+
+Task list for part 2:
+create the elliptical motion of the stars
+create a protractor tool that can measure the angle between to points on a stars ellipse
+add player ability to turn star trails on and off
+make the stars in the scene equal 
