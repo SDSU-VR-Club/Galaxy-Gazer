@@ -43,4 +43,5 @@ Task list for part 2:
 create the elliptical motion of the stars
 create a protractor tool that can measure the angle between to points on a stars ellipse
 add player ability to turn star trails on and off
-make the stars in the scene equal 
+make the stars in the scene equal to their positions in a constellation (big dipper)
+
