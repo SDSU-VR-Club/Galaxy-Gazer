@@ -2,6 +2,7 @@
 This project by the SDSU vr club is designed to help students learn astronomy concepts in virtual reality
 Instructions for use 
 
+# Steps to Contribute
 Step 1: Clone this repo by clicking the green clone button on the main page and copying the URL dsiplayed.
 
 Step 2: Open Github Desktop application and click File>clone repository. Enter the URL from github.com. (note the local location of the project on your computer)
@@ -19,3 +20,12 @@ Step 7: back on github.com click on the “branches” section. You should see y
 Step 8: Click the green “create pull request” button
 
 Done 
+
+# Important dates
+March 23-beta release
+April 12-refined release
+April 19 feature freeze and review
+April 25 launch
+
+# Project part 1 
+This part is focused on having students determine which star is closest to others while moving
