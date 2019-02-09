@@ -30,7 +30,7 @@ April 25 launch
 # Project part 1 
 This part is focused on having students determine which star is closest to others while moving to look at the perspective movement of the stars.
 Task list for part 1:
-stop star flares from rotating when the camera moves.
+stop star flares from rotating when the camera moves. /n \n
 spawn the constellations in front of the player at eye level
 increase collider size on stars as they get further away
 arrange constellations sequentially
