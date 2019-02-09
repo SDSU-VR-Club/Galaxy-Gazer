@@ -8,9 +8,14 @@ public class ScaleByDistance : MonoBehaviour {
     GameObject cam;
     float dist;
 
+    public GameObject hit;
+
 	// Use this for initialization
 	void Start () {
         cam = Camera.main.gameObject;
+
+       // GameObject x = Instantiate(hit, transform.position, Quaternion.identity);
+       // x.transform.position -= new Vector3(0, 0, 1);
     }
 	
 	// Update is called once per frame
@@ -19,5 +24,5 @@ public class ScaleByDistance : MonoBehaviour {
         float i = dist / Mathf.Pow(scale,-1) / 10;
         transform.localScale = new Vector3(i, i, i);
         GetComponent<TrailRenderer>().startWidth = i;
-	}
+    }
 }
