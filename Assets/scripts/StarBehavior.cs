@@ -11,7 +11,7 @@ public class StarBehavior : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         //so we can get back to the color we started at when we highlight
-        originalColor = GetComponent<MeshRenderer>().material.color;
+        originalColor = GetComponent<SpriteRenderer>().color;
         
     }
 	
@@ -31,8 +31,7 @@ public class StarBehavior : MonoBehaviour {
     //called in the event a star is successfully selected
     public void success()
     {
-        GetComponent<MeshRenderer>().material.color=Color.green;
-        GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.green);
+        GetComponent<SpriteRenderer>().color=Color.green;
         finished = true;
     }
     //turns the star red for 2 sec and prevents it from being selected again rapidly
@@ -45,11 +44,9 @@ public class StarBehavior : MonoBehaviour {
     private IEnumerator red()
     {
         failing = true;
-        GetComponent<MeshRenderer>().material.color = Color.red;
-        GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.red);
+        GetComponent<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(2);
-        GetComponent<MeshRenderer>().material.color = originalColor;
-        GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", originalColor); 
+        GetComponent<SpriteRenderer>().color = originalColor;
         failing = false;
     }
     //called when a star is hovered over
@@ -57,8 +54,7 @@ public class StarBehavior : MonoBehaviour {
     {
         if (!finished && !failing)
         {
-            GetComponent<MeshRenderer>().material.color = Color.blue;
-            GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", Color.blue);
+            GetComponent<SpriteRenderer>().color = Color.blue;
         }
     }
     //called every frame to counteract highlight
@@ -66,8 +62,7 @@ public class StarBehavior : MonoBehaviour {
     {
         if (!finished && !failing)
         {
-            GetComponent<MeshRenderer>().material.color = originalColor;
-            GetComponent<MeshRenderer>().material.SetColor("_EmissionColor", originalColor);
+            GetComponent<SpriteRenderer>().color = originalColor;
         }
     }
 }
