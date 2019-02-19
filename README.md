@@ -32,15 +32,13 @@ This part is focused on having students determine which star is closest to other
 
 Task list for part 1:
 
-stop star flares from rotating when the camera moves. (Carter)
-
 spawn the constellations in front of the player at eye level 
 
-increase collider size on stars as they get further away
+increase collider size on stars as they get further away 
 
-arrange constellations sequentially
+arrange constellations sequentially (Carter)
 
-tilt the skybox to the correct angle. (Carter)
+tilt the skybox to the correct angle. (Patrick)
 
 # Project part 2
 This part is focused on showing the ellipse like movement of stars viewed from earth to determine their distance from the player
