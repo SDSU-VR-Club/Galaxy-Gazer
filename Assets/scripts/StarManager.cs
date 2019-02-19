@@ -8,9 +8,15 @@ public class StarManager : MonoBehaviour {
     public float score = 0;
     public AudioSource badSound;
     public AudioSource goodSound;
+    public GameObject currentConstellation;
+    public GameObject[] constellations;
+    int currentIndex = 0;
+    public Transform SpawnPosition;
     // Use this for initialization
     void Start () {
-		
+       var tmp= Instantiate(constellations[currentIndex++]);
+        tmp.transform.position = SpawnPosition.position;
+        currentConstellation = tmp;
 	}
 	
 	// Update is called once per frame
@@ -47,7 +53,7 @@ public class StarManager : MonoBehaviour {
             goodSound.Play();
             stars.Remove(closestStar.transform);
             if (stars.Count == 0)
-                GetComponent<UIManager>().gameOver((int) score);
+                GetComponent<UIManager>().nextConstellation((int) score);
             return;
 
         }
@@ -55,6 +61,25 @@ public class StarManager : MonoBehaviour {
         starToCheck.fail();
         badSound.Play();
         score++;
+
+    }
+    public void nextConstellation(int score)
+    {
+        //score screen pops up
+
+
+        StartCoroutine(cycleConstellation());
+    }
+    private IEnumerator cycleConstellation()
+    {
+        Destroy(currentConstellation);
+        stars = null;
+        yield return new WaitForSeconds(3);
+        if (currentIndex == constellations.Length - 1)
+            Application.LoadLevel(Application.loadedLevel + 1);
+        var tmp = Instantiate(constellations[currentIndex++]);
+        tmp.transform.position = SpawnPosition.position;
+        currentConstellation = tmp;
 
     }
 }

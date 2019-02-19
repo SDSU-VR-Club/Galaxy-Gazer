@@ -17,10 +17,19 @@ public class UIManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
-    public void gameOver(int score)
+    public void nextConstellation(int score)
     {
         //score screen pops up
-        finalUI.SetActive(true);
+        
         finalText.SetText(score.ToString());
+        finalUI.SetActive(true);
+        StartCoroutine(cycleConstellation());
     }
+    private IEnumerator cycleConstellation()
+    {
+        yield return new WaitForSeconds(3);
+        finalUI.SetActive(false);
+
+    }
+    
 }
