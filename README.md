@@ -32,11 +32,9 @@ This part is focused on having students determine which star is closest to other
 
 Task list for part 1:
 
-spawn the constellations in front of the player at eye level 
+spawn the constellations in front of the player at eye level (?)
 
 increase collider size on stars as they get further away 
-
-arrange constellations sequentially (Carter)
 
 tilt the skybox to the correct angle. (Patrick)
 
@@ -45,11 +43,8 @@ This part is focused on showing the ellipse like movement of stars viewed from e
 
 Task list for part 2:
 
-create the elliptical motion of the stars (Kain)
-
 create a protractor tool that can measure the angle between to points on a stars ellipse (Sam or Cory)
 
-add player ability to turn star trails on and off (Vanessa)
 
-make the stars in the scene equal to their positions in a constellation (big dipper)
+
 
