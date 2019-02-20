@@ -14,11 +14,14 @@ public class StarManager : MonoBehaviour {
     public Transform SpawnPosition;
     // Use this for initialization
     void Start () {
-       var tmp= Instantiate(constellations[currentIndex++]);
+       
+	}
+	public void Begin()
+    {
+        var tmp = Instantiate(constellations[currentIndex++]);
         tmp.transform.position = SpawnPosition.position;
         currentConstellation = tmp;
-	}
-	
+    }
 	// Update is called once per frame
 	void Update () {
 		
@@ -53,7 +56,10 @@ public class StarManager : MonoBehaviour {
             goodSound.Play();
             stars.Remove(closestStar.transform);
             if (stars.Count == 0)
-                GetComponent<UIManager>().nextConstellation((int) score);
+            {
+                GetComponent<UIManager>().nextUI((int)score);
+                nextConstellation();
+            }
             return;
 
         }
@@ -63,7 +69,7 @@ public class StarManager : MonoBehaviour {
         score++;
 
     }
-    public void nextConstellation(int score)
+    public void nextConstellation()
     {
         //score screen pops up
 

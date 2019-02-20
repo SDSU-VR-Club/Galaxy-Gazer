@@ -17,15 +17,15 @@ public class UIManager : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.R))
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 	}
-    public void nextConstellation(int score)
+    public void nextUI(int score)
     {
         //score screen pops up
         
         finalText.SetText(score.ToString());
         finalUI.SetActive(true);
-        StartCoroutine(cycleConstellation());
+        StartCoroutine(cycleUI());
     }
-    private IEnumerator cycleConstellation()
+    private IEnumerator cycleUI()
     {
         yield return new WaitForSeconds(3);
         finalUI.SetActive(false);

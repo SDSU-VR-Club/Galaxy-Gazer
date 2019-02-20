@@ -10,6 +10,7 @@ namespace Valve.VR.InteractionSystem
         public Transform shootTransform;
         Hand myHand;
         Color green;
+        GameObject lastSelectedObject;
         // Use this for initialization
         void Start() {
             myHand = GetComponent<Hand>();
@@ -23,9 +24,14 @@ namespace Valve.VR.InteractionSystem
             {
                 if (hit.collider.gameObject.GetComponent<StarBehavior>() != null)
                 {
+                    if (lastSelectedObject != null)
+                    {
+                        lastSelectedObject.GetComponent<StarBehavior>().dehighlight();
+                    }
                     hit.collider.gameObject.GetComponent<StarBehavior>().highlight();
                     GetComponentInChildren<LineRenderer>().startColor = Color.blue;
                     GetComponentInChildren<LineRenderer>().endColor = Color.blue;
+                    lastSelectedObject = hit.collider.gameObject;
                 }
             }
             else
@@ -38,15 +44,16 @@ namespace Valve.VR.InteractionSystem
             RaycastHit hit;
             if (GetComponent<Hand>().grabPinchAction.GetLastStateDown(GetComponent<Hand>().handType))
             {
-                
-                if (Physics.Raycast(shootTransform.position, shootTransform.forward,out hit))
-                {
-                    if (hit.collider.gameObject.GetComponent<StarBehavior>() != null)
-                    {
-                        hit.collider.gameObject.GetComponent<StarBehavior>().select();
-                    }
-                }
+                lastSelectedObject.GetComponent<StarBehavior>().select();
+                //if (Physics.Raycast(shootTransform.position, shootTransform.forward, out hit))
+                //{
+                //    if (hit.collider.gameObject.GetComponent<StarBehavior>() != null)
+                //    {
+                //        hit.collider.gameObject.GetComponent<StarBehavior>().select();
+                //    }
+                //}
             }
+           
 
     }
     }
