@@ -5,26 +5,30 @@ namespace Valve.VR.InteractionSystem
 {
     public class turnofftrail : MonoBehaviour
     {
-
+        Hand myHand;
         // Use this for initialization
         void Start()
         {
+            myHand = GetComponent<Hand>();
         }
 
         // Update is called once per frame
-        int count = 0;
+        bool count = true;
         void Update()
         {
 
-            if (count == 0 && Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+            if (count  && (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)|| GetComponent<Hand>().grabGripAction.GetLastStateDown(GetComponent<Hand>().handType)))
             {
-                GetComponent<TrailRenderer>().enabled = false;
-                count = 1;
+              
+                foreach (TrailRenderer a in FindObjectsOfType<TrailRenderer>())
+                    a.enabled = false;
+                count = false;
             }
-            else if (count == 1 && Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+            else if (!count  && (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1)|| GetComponent<Hand>().grabGripAction.GetLastStateDown(GetComponent<Hand>().handType)))
             {
-                GetComponent<TrailRenderer>().enabled = true;
-                count = 0;
+                foreach (TrailRenderer a in FindObjectsOfType<TrailRenderer>())
+                    a.enabled = true;
+                count = true;
             }
         }
     }
