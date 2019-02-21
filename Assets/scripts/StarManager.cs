@@ -78,6 +78,7 @@ public class StarManager : MonoBehaviour {
     }
     private IEnumerator cycleConstellation()
     {
+        score = 0;
         Destroy(currentConstellation);
         stars = null;
         yield return new WaitForSeconds(3);

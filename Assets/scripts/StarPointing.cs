@@ -11,32 +11,42 @@ namespace Valve.VR.InteractionSystem
         Hand myHand;
         Color green;
         GameObject lastSelectedObject;
+        bool started=false;
         // Use this for initialization
         void Start() {
             myHand = GetComponent<Hand>();
             green = new Color(0, 1, 0);
+            StartCoroutine(begin());
+        }
+        private IEnumerator begin()
+        {
+            yield return new WaitForSeconds(0.1f);
+            started = true;
         }
         //shoots beam to highlight hovered stars
         private void LateUpdate()
         {
-            RaycastHit hit;
-            if (Physics.Raycast(shootTransform.position, shootTransform.forward, out hit))
+            if (started)
             {
-                if (hit.collider.gameObject.GetComponent<StarBehavior>() != null)
+                RaycastHit hit;
+                if (Physics.Raycast(shootTransform.position, shootTransform.forward, out hit))
                 {
-                    if (lastSelectedObject != null)
+                    if (hit.collider.gameObject.GetComponent<StarBehavior>() != null)
                     {
-                        lastSelectedObject.GetComponent<StarBehavior>().dehighlight();
+                        if (lastSelectedObject != null)
+                        {
+                            lastSelectedObject.GetComponent<StarBehavior>().dehighlight();
+                        }
+                        hit.collider.gameObject.GetComponent<StarBehavior>().highlight();
+                        GetComponentInChildren<LineRenderer>().startColor = Color.blue;
+                        GetComponentInChildren<LineRenderer>().endColor = Color.blue;
+                        lastSelectedObject = hit.collider.gameObject;
                     }
-                    hit.collider.gameObject.GetComponent<StarBehavior>().highlight();
-                    GetComponentInChildren<LineRenderer>().startColor = Color.blue;
-                    GetComponentInChildren<LineRenderer>().endColor = Color.blue;
-                    lastSelectedObject = hit.collider.gameObject;
                 }
-            }
-            else
-            {
-                GetComponentInChildren<LineRenderer>().startColor = Color.white;
+                else
+                {
+                    GetComponentInChildren<LineRenderer>().startColor = Color.white;
+                }
             }
         }
         //Called on trigger press to select a star if pointed one is being pointed at

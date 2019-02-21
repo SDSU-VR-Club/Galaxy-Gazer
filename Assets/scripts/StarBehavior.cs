@@ -52,6 +52,7 @@ public class StarBehavior : MonoBehaviour {
     //called when a star is hovered over
     public void highlight()
     {
+        print("The quick brown fox");
         if (!finished && !failing)
         {
             GetComponent<SpriteRenderer>().color = Color.blue;
