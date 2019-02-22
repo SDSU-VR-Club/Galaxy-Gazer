@@ -44,13 +44,13 @@ public class spacecontrols : MonoBehaviour
         if (LtouchpadValue.y != 0)
         {
             transform.position += Ldirection * speed * LtouchpadValue.y * ShrinkPercent;
-            print("Lyo");
+            //print("Lyo");
         }
 
         if (RtouchpadValue.y != 0)
         {
             transform.position += Rdirection * speed * RtouchpadValue.y  * ShrinkPercent;
-            print("Ryo");
+            //print("Ryo");
         }
 
         if (SteamVR_Input._default.inActions.Teleport.GetStateDown(SteamVR_Input_Sources.Any))
