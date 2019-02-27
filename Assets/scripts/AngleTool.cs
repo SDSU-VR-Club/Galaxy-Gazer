@@ -1,16 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 //see Carter for more info
 namespace Valve.VR.InteractionSystem
 {
     [RequireComponent(typeof(Hand))]
-    public class StarPointing : MonoBehaviour {
+    public class AngleTool : MonoBehaviour {
         //where the hand beam points from
         public Transform shootTransform;
         Hand myHand;
         Color green;
         GameObject lastSelectedObject;
+        Vector3 FirstAnglePosition;
+        Vector3 SecondAnglePosition;
+        GameObject head;
+        TextMeshProUGUI AngleUI;
+        
         public int DecimalPlaces;
         bool started=false;
         // Use this for initialization
@@ -18,6 +24,8 @@ namespace Valve.VR.InteractionSystem
             myHand = GetComponent<Hand>();
             green = new Color(0, 1, 0);
             StartCoroutine(begin());
+            head=FindObjectOfType<Camera>().gameObject;
+            AngleUI = GetComponentInChildren<TextMeshProUGUI>();
         }
         private IEnumerator begin()
         {
@@ -56,6 +64,11 @@ namespace Valve.VR.InteractionSystem
             if (GetComponent<Hand>().grabPinchAction.GetLastStateDown(GetComponent<Hand>().handType))
             {
 
+                SelectTwo();
+                float tempAngle = GetAngle(FirstAnglePosition, SecondAnglePosition);
+                if (tempAngle != -404)
+                AngleUI.text = (Mathf.Round(tempAngle*Mathf.Pow(10,DecimalPlaces)) / Mathf.Pow(10, DecimalPlaces) + "°");
+
                 lastSelectedObject.GetComponent<StarBehavior>().select();
                 //if (Physics.Raycast(shootTransform.position, shootTransform.forward, out hit))
                 //{
@@ -69,7 +82,29 @@ namespace Valve.VR.InteractionSystem
 
     }
 
+        void SelectTwo()
+        {
+            if (FirstAnglePosition != lastSelectedObject.transform.position)
+            {
+                SecondAnglePosition = FirstAnglePosition;
+                FirstAnglePosition = transform.forward;
 
+                //print("---------");
+                //print(FirstAnglePosition);
+                //print(SecondAnglePosition);
+            }
+            else
+            {
+                //print("---------");
+                //print("already selected");
+            }
+
+        }
+
+        float GetAngle(Vector3 first, Vector3 second)
+        {
+             return Vector3.Angle(first, second);
+        }
 
     }
 }
