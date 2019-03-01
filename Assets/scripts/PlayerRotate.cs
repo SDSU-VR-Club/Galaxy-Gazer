@@ -46,6 +46,7 @@ public class PlayerRotate : MonoBehaviour
                 player.transform.eulerAngles.y - 20,
                 player.transform.eulerAngles.z
             );
+            constToRotateTo++;
         }
 
         else if(constToRotateTo == 1)
@@ -56,7 +57,7 @@ public class PlayerRotate : MonoBehaviour
                 player.transform.eulerAngles.y + 16,
                 player.transform.eulerAngles.z
             );
-
+            constToRotateTo++;
         }
 
         else

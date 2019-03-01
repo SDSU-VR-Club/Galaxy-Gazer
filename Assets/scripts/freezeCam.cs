@@ -13,7 +13,7 @@ public class freezeCam : MonoBehaviour
     void Start()
     {
         //InitialPos = transform.position;
-        UnityEngine.XR.InputTracking.disablePositionalTracking = true;
+        //UnityEngine.XR.InputTracking.disablePositionalTracking = true;
     }
 
     // Update is called once per frame

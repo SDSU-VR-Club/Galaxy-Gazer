@@ -18,6 +18,7 @@ public class StarManager : MonoBehaviour {
 	}
 	public void Begin()
     {
+        FindObjectOfType<PlayerRotate>().playerRotate();
         var tmp = Instantiate(constellations[currentIndex++]);
         tmp.transform.position = SpawnPosition.position;
         currentConstellation = tmp;
@@ -82,8 +83,11 @@ public class StarManager : MonoBehaviour {
         Destroy(currentConstellation);
         stars = null;
         yield return new WaitForSeconds(3);
-        if (currentIndex == constellations.Length - 1)
+        if (currentIndex == constellations.Length)
+        {
+            Destroy(FindObjectOfType<PlayerRotate>().gameObject);
             Application.LoadLevel(Application.loadedLevel + 1);
+        }
         var tmp = Instantiate(constellations[currentIndex++]);
         tmp.transform.position = SpawnPosition.position;
         currentConstellation = tmp;

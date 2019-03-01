@@ -2737,6 +2737,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AstronomyPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 1221486581821236, guid: 69eb05b027c552d4dade1ca706f23d36, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4561379060269996, guid: 69eb05b027c552d4dade1ca706f23d36, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
