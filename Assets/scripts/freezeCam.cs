@@ -13,18 +13,15 @@ public class freezeCam : MonoBehaviour
     void Start()
     {
         //InitialPos = transform.position;
-        //UnityEngine.XR.InputTracking.disablePositionalTracking = true;
+        UnityEngine.XR.InputTracking.disablePositionalTracking = true;
     }
-    //private void Update()
-    //{
-    //    transform.position = -UnityEngine.XR.InputTracking.GetLocalPosition(UnityEngine.XR.XRNode.Head);
-    //}
+
     // Update is called once per frame
-    // void LateUpdate()
+   // void LateUpdate()
     //{
-    //hmdPos = HMD.transform.position;                         Can't work in world position
-    //transform.position = InitialPos - hmdPos;                for some reason
-    //   hmdPos = HMD.transform.localPosition;
-    //   transform.position = CameraPos.position - hmdPos;
-    // }
+        //hmdPos = HMD.transform.position;                         Can't work in world position
+        //transform.position = InitialPos - hmdPos;                for some reason
+     //   hmdPos = HMD.transform.localPosition;
+     //   transform.position = CameraPos.position - hmdPos;
+   // }
 }

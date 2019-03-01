@@ -5,7 +5,6 @@
       "app_key": "application.generated.unity.githubtest.exe",
       "launch_type": "url",
       "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\andre\\Documents\\UnityProjects\\GithubTest\\actions.json",
       "strings": {
         "en_us": {
           "name": "GithubTest [Testing]"
