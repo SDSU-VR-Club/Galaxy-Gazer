@@ -53,9 +53,6 @@ public class spacecontrols : MonoBehaviour
             //print("Ryo");
         }
 
-        if (SteamVR_Input._default.inActions.Teleport.GetStateDown(SteamVR_Input_Sources.Any))
-        {
-            print("tele");
-        }
+  
     }
 }

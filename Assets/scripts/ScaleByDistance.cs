@@ -12,7 +12,7 @@ public class ScaleByDistance : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        cam = Camera.main.gameObject;
+        cam = FindObjectOfType<Camera>().gameObject;
 
        // GameObject x = Instantiate(hit, transform.position, Quaternion.identity);
        // x.transform.position -= new Vector3(0, 0, 1);

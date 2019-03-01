@@ -6,7 +6,7 @@ using UnityEngine;
 public class newFlareScaler : MonoBehaviour {
     //size multiplier on the star
     //flare component
-    public Transform mainCam;
+    Transform mainCam;
     //used for initialization
     bool first = true;
     //determines the rate of fading with distance
@@ -17,7 +17,7 @@ public class newFlareScaler : MonoBehaviour {
     {
 
         if (mainCam == null)
-            mainCam = Camera.main.transform;
+            mainCam = FindObjectOfType<Camera>().transform;
 
    
         
