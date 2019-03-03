@@ -32,18 +32,32 @@ This part is focused on having students determine which star is closest to other
 
 Task list for part 1:
 
-spawn the constellations in front of the player at eye level (cory)
+Display the order of the stars closest to farthest as each one is selected. (Sam)
 
-increase collider size on stars as they get further away (Sam)
+Change Score UI to misses (Vanessa)
 
-tilt the skybox to the correct angle. (Patrick)
+move the player to the center of the constellation once the player has completed it. (Cory)
+
+Place a model of the sun at 1/3 of the players height (Peter)
+
+tilt the skybox to the correct angle. (Carter)
 
 # Project part 2
 This part is focused on showing the ellipse like movement of stars viewed from earth to determine their distance from the player
 
 Task list for part 2:
 
-create a protractor tool that can measure the angle between to points on a stars ellipse (Carter or Kain)
+instead of the stars moving in a circle, the player should move in a circle.
+
+add more stars at a variety of distances and angles from the player. ie horizontal to vertical
+
+place a stationary model of the sun at the center of the players orbit
+
+place a model of the earth beneath the player at roughly their knees
+
+click and hold the trigger to use angle tool instead of pressing twice
+
+Display a fan when the angle tool is being used.
 
 
 
