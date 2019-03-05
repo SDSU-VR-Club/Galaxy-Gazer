@@ -4,8 +4,8 @@ Shader "Skybox/RCubemap" {
 	Properties{
 		_Tint("Tint Color", Color) = (.5, .5, .5, .5)
 		[Gamma] _Exposure("Exposure", Range(0, 8)) = 1.0
-		 _ZRotation("XRotation", Range(0, 360)) = 0
-		_YRotation("YRotation", Range(0, 360)) = 0		
+		 _ZRotation("YRotation", Range(0, 360)) = 0
+		_YRotation("XRotation", Range(0, 360)) = 0		
 		_XRotation("ZRotation", Range(0, 360)) = 0
 		[NoScaleOffset] _Tex("Cubemap   (HDR)", Cube) = "grey" {}
 	}
@@ -54,7 +54,7 @@ Shader "Skybox/RCubemap" {
 					float sina, cosa;
 					sincos(alpha, sina, cosa);
 					float2x2 m = float2x2(cosa, -sina, sina, cosa);
-					return float3(vertex.x,mul(m, vertex.yz)).xzy;
+					return float3(mul(m, vertex.xy),vertex.z).xzy;
 				}
 
 				struct appdata_t {
