@@ -74,8 +74,8 @@ Shader "Skybox/RCubemap" {
 					UNITY_SETUP_INSTANCE_ID(v);
 					UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
 					float3 rotated = RotateAroundYInDegrees(v.vertex,_YRotation);
-					rotated = RotateAroundXInDegrees(rotated,_XRotation+270);
-					rotated = RotateAroundZInDegrees(rotated, _ZRotation+90);
+					rotated = RotateAroundXInDegrees(rotated,_XRotation);
+					rotated = RotateAroundZInDegrees(rotated, _ZRotation);
 					o.vertex = UnityObjectToClipPos(rotated);
 					o.texcoord = v.vertex.xyz;
 					return o;
