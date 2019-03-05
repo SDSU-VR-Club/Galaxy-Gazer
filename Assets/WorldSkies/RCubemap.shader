@@ -4,7 +4,9 @@ Shader "Skybox/RCubemap" {
 	Properties{
 		_Tint("Tint Color", Color) = (.5, .5, .5, .5)
 		[Gamma] _Exposure("Exposure", Range(0, 8)) = 1.0
-		_Rotation("Rotation", Range(0, 360)) = 0
+		 _ZRotation("XRotation", Range(0, 360)) = 0
+		_YRotation("YRotation", Range(0, 360)) = 0		
+		_XRotation("ZRotation", Range(0, 360)) = 0
 		[NoScaleOffset] _Tex("Cubemap   (HDR)", Cube) = "grey" {}
 	}
 
@@ -25,15 +27,34 @@ Shader "Skybox/RCubemap" {
 				half4 _Tex_HDR;
 				half4 _Tint;
 				half _Exposure;
-				float _Rotation;
-
+				float _YRotation;
+				float _XRotation;
+				float _ZRotation;
 				float3 RotateAroundYInDegrees(float3 vertex, float degrees)
 				{
 					float alpha = degrees * UNITY_PI / 180.0;
 					float sina, cosa;
 					sincos(alpha, sina, cosa);
 					float2x2 m = float2x2(cosa, -sina, sina, cosa);
-					return float3( vertex.x,mul(m, vertex.yz)).xzy;
+					return float3(mul(m, vertex.xz), vertex.y).xzy;
+				}
+
+				float3 RotateAroundXInDegrees(float3 vertex, float degrees)
+				{
+					float alpha = degrees * UNITY_PI / 180.0;
+					float sina, cosa;
+					sincos(alpha, sina, cosa);
+					float2x2 m = float2x2(cosa, -sina, sina, cosa);
+					return float3(mul(m, vertex.xy), vertex.z).xzy;
+				}
+
+				float3 RotateAroundZInDegrees(float3 vertex, float degrees)
+				{
+					float alpha = degrees * UNITY_PI / 180.0;
+					float sina, cosa;
+					sincos(alpha, sina, cosa);
+					float2x2 m = float2x2(cosa, -sina, sina, cosa);
+					return float3(vertex.x,mul(m, vertex.yz)).xzy;
 				}
 
 				struct appdata_t {
@@ -52,7 +73,9 @@ Shader "Skybox/RCubemap" {
 					v2f o;
 					UNITY_SETUP_INSTANCE_ID(v);
 					UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
-					float3 rotated = RotateAroundYInDegrees(v.vertex, _Rotation);
+					float3 rotated = RotateAroundYInDegrees(v.vertex,_YRotation);
+					rotated = RotateAroundXInDegrees(rotated,_XRotation+270);
+					rotated = RotateAroundZInDegrees(rotated, _ZRotation+90);
 					o.vertex = UnityObjectToClipPos(rotated);
 					o.texcoord = v.vertex.xyz;
 					return o;
