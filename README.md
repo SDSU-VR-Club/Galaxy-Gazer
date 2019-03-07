@@ -40,7 +40,6 @@ move the player to the center of the constellation once the player has completed
 
 Place a model of the sun at 1/3 of the players height (Peter)
 
-tilt the skybox to the correct angle. (Carter)
 
 # Project part 2
 This part is focused on showing the ellipse like movement of stars viewed from earth to determine their distance from the player
@@ -55,9 +54,7 @@ place a stationary model of the sun at the center of the players orbit
 
 place a model of the earth beneath the player at roughly their knees
 
-click and hold the trigger to use angle tool instead of pressing twice
 
-Display a fan when the angle tool is being used.
 
 
 
