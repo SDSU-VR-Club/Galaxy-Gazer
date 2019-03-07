@@ -22,7 +22,8 @@ namespace Valve.VR.InteractionSystem
         bool measuring = false;
         Vector3[] vertices;
         int[] triangles;
-        MeshRenderer renderer;
+        public MeshRenderer renderer;
+        public MeshFilter meshFilter;
         // Use this for initialization
         void Start() {
             myHand = GetComponent<Hand>();
@@ -33,8 +34,7 @@ namespace Valve.VR.InteractionSystem
             coneMesh.name = "coneMesh";
             triangles = new int[6];
             vertices = new Vector3[3];
-            renderer = GetComponent<MeshRenderer>();
-            GetComponent<MeshFilter>().mesh = coneMesh;
+            meshFilter.mesh = coneMesh;
             FirstAnglePosition = Vector3.right;
             SecondAnglePosition = Vector3.forward;
             renderer.enabled = false;
@@ -46,7 +46,7 @@ namespace Valve.VR.InteractionSystem
             
             if (measuring)
             {
-                SecondAnglePosition = shootTransform.forward;
+                SecondAnglePosition = transform.forward;
                 drawCone();
                 float tempAngle = GetAngle(FirstAnglePosition, SecondAnglePosition);
                 if (tempAngle != -404)
@@ -56,7 +56,7 @@ namespace Valve.VR.InteractionSystem
 
             if (GetComponent<Hand>().grabPinchAction.GetLastStateDown(GetComponent<Hand>().handType))
             {
-                FirstAnglePosition = shootTransform.forward;
+                FirstAnglePosition = transform.forward;
                 measuring = true;
                 renderer.enabled = true;
             }
@@ -75,9 +75,9 @@ namespace Valve.VR.InteractionSystem
         }
         void drawCone()
         {
-            vertices[0] = shootTransform.position;
-            vertices[1] = shootTransform.position + FirstAnglePosition * 1000;
-            vertices[2] = shootTransform.position + SecondAnglePosition * 1000;
+            vertices[0] = transform.position;
+            vertices[1] = transform.position+FirstAnglePosition * 1000;
+            vertices[2] = transform.position+SecondAnglePosition * 1000;
             coneMesh.vertices = vertices;
             triangles[0] = 0;
             triangles[1] = 1;
