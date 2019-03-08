@@ -38,21 +38,13 @@ Change Score UI to misses (Vanessa)
 
 move the player to the center of the constellation once the player has completed it. (Cory)
 
-Place a model of the sun at 1/3 of the players height (Peter)
-
 
 # Project part 2
 This part is focused on showing the ellipse like movement of stars viewed from earth to determine their distance from the player
 
 Task list for part 2:
 
-instead of the stars moving in a circle, the player should move in a circle.
-
-add more stars at a variety of distances and angles from the player. ie horizontal to vertical
-
-place a stationary model of the sun at the center of the players orbit
-
-place a model of the earth beneath the player at roughly their knees
+place a see throgh grid underneath the player at real-world ground height.
 
 
 
