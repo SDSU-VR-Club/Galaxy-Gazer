@@ -73,7 +73,7 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
             float.TryParse(row[Xcolumn - 1], out x);
             float.TryParse(row[Ycolumn - 1], out y);
             float.TryParse(row[Zcolumn - 1], out z);
-            tempStar.transform.position = new Vector3(x,y,z);
+            tempStar.transform.position = transform.position+ transform.TransformPoint(new Vector3(x,y,z));
             tempStar.transform.position *= distanceExagerationMultiplier;
             //star diameter
             if (!SetDiameter)

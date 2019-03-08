@@ -1522,6 +1522,7 @@ GameObject:
   - component: {fileID: 114488365433186318}
   - component: {fileID: 114990165325103840}
   - component: {fileID: 8672480648854303920}
+  - component: {fileID: 2867477496340988299}
   m_Layer: 0
   m_Name: AstronomyPlayer3DOF
   m_TagString: Untagged
@@ -1611,6 +1612,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94b39c19ad075314287f95affd65e3e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2867477496340988299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1855673861790972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385ca99bcb3007d4ea51dcc50eb519a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Speed: 1
+  Xwidth: 200
+  Zwidth: 200
 --- !u!1 &1871193826472870
 GameObject:
   m_ObjectHideFlags: 0
