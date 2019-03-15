@@ -8,7 +8,6 @@ namespace Valve.VR.InteractionSystem
     [RequireComponent(typeof(Hand))]
     public class AngleTool : MonoBehaviour {
         //where the hand beam points from
-        public Transform shootTransform;
         Hand myHand;
         Color green;
         GameObject lastSelectedObject;
@@ -75,9 +74,12 @@ namespace Valve.VR.InteractionSystem
         }
         void drawCone()
         {
-            vertices[0] = transform.position;
-            vertices[1] = transform.position+FirstAnglePosition * 1000;
-            vertices[2] = transform.position+SecondAnglePosition * 1000;
+            Matrix4x4 localToWorld = transform.worldToLocalMatrix;
+
+
+            vertices[0] = localToWorld.MultiplyPoint3x4(transform.position);
+            vertices[1] = localToWorld.MultiplyPoint3x4(transform.position+FirstAnglePosition * 1000);
+            vertices[2] = localToWorld.MultiplyPoint3x4(transform.position+SecondAnglePosition * 1000);
             coneMesh.vertices = vertices;
             triangles[0] = 0;
             triangles[1] = 1;

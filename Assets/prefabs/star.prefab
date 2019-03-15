@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 212730343556819196}
   - component: {fileID: 114362023425726026}
   - component: {fileID: 6531832996427435240}
+  - component: {fileID: 8645437705645756211}
   m_Layer: 8
   m_Name: star
   m_TagString: Untagged
@@ -62,7 +63,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea8ecaa7105a2dd409971de514f64549, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainCam: {fileID: 0}
   dampening: 1
   minimumBrightness: 0.4
 --- !u!114 &114513671759976286
@@ -257,3 +257,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mult: 0.0025
   mindist: 0
+--- !u!114 &8645437705645756211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339055033768952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09db4bdce97fd41e297460d484021020, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerObject: {fileID: 0}
+  hitmarkerprefab: {fileID: 8279828504610472307, guid: 947350f16cee648b69f40ab4749c8517,
+    type: 3}
+  colors:
+  - {r: 0.04830408, g: 1, b: 0, a: 1}
+  count: 0

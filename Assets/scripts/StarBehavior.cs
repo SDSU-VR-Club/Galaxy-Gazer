@@ -31,6 +31,7 @@ public class StarBehavior : MonoBehaviour {
     //called in the event a star is successfully selected
     public void success()
     {
+        GetComponent<TEXTSHOW>().Hitnow();
         GetComponent<SpriteRenderer>().color=Color.green;
         finished = true;
     }

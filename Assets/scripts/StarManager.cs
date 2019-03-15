@@ -20,6 +20,7 @@ public class StarManager : MonoBehaviour {
     {
         FindObjectOfType<PlayerRotate>().playerRotate();
         var tmp = Instantiate(constellations[currentIndex++]);
+        SpawnPosition = FindObjectOfType<Camera>().transform;
         tmp.transform.position = SpawnPosition.position;
         currentConstellation = tmp;
     }
@@ -42,7 +43,7 @@ public class StarManager : MonoBehaviour {
         StarBehavior closestStar=null;
         foreach(Transform a in stars)
         {
-            var dist = Vector3.Distance(Camera.main.transform.position, a.position);
+            var dist = Vector3.Distance(SpawnPosition.position, a.position);
             if (dist < lowest)
             {
                 lowest = dist;
@@ -88,9 +89,12 @@ public class StarManager : MonoBehaviour {
             Destroy(FindObjectOfType<PlayerRotate>().gameObject);
             Application.LoadLevel(Application.loadedLevel + 1);
         }
-        var tmp = Instantiate(constellations[currentIndex++]);
-        tmp.transform.position = SpawnPosition.position;
-        currentConstellation = tmp;
-
+        else
+        {
+            var tmp = Instantiate(constellations[currentIndex++]);
+            TEXTSHOW.count = 1;
+            tmp.transform.position = SpawnPosition.position;
+            currentConstellation = tmp;
+        }
     }
 }

@@ -7,7 +7,6 @@ namespace Valve.VR.InteractionSystem
     [RequireComponent(typeof(Hand))]
     public class StarPointing : MonoBehaviour {
         //where the hand beam points from
-        public Transform shootTransform;
         Hand myHand;
         Color green;
         GameObject lastSelectedObject;
@@ -30,7 +29,7 @@ namespace Valve.VR.InteractionSystem
             if (started)
             {
                 RaycastHit hit;
-                if (Physics.Raycast(shootTransform.position, shootTransform.forward, out hit))
+                if (Physics.Raycast(transform.position, transform.forward, out hit))
                 {
                     if (hit.collider.gameObject.GetComponent<StarBehavior>() != null)
                     {
@@ -57,7 +56,7 @@ namespace Valve.VR.InteractionSystem
             {
 
                 lastSelectedObject.GetComponent<StarBehavior>().select();
-                //if (Physics.Raycast(shootTransform.position, shootTransform.forward, out hit))
+                //if (Physics.Raycast(transform.position, transform.forward, out hit))
                 //{
                 //    if (hit.collider.gameObject.GetComponent<StarBehavior>() != null)
                 //    {

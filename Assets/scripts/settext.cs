@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class settext : MonoBehaviour
 {
-    private Text myText;
+  
 
     public void settextmove(string str , Color txtcolor)
    {
-       myText = GetComponentInChildren<Text>();
+        var myText = GetComponentInChildren<TextMeshPro>();
         myText.color = txtcolor;
         myText.text = str;
        
