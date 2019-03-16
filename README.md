@@ -32,20 +32,28 @@ This part is focused on having students determine which star is closest to other
 
 Task list for part 1:
 
-Display the order of the stars closest to farthest as each one is selected. (Sam)
-
-Change Score UI to misses (Vanessa)
-
 move the player to the center of the constellation once the player has completed it. (Cory)
-
 
 # Project part 2
 This part is focused on showing the ellipse like movement of stars viewed from earth to determine their distance from the player
 
 Task list for part 2:
 
-place a see throgh grid underneath the player at real-world ground height.
+place a see through (tranparent) grid underneath the player at real-world ground height.
 
+place the sun prefab in the transparent transparent grid at the center of the players orbit
+
+increase the transparency of the coneMat material that colors the angle tool indicator
+
+reposition angle text on the controller and make transparent
+
+prevent the star sprite from rotating at the top of the player vision
+
+fix left and right hand line pointers
+
+position more stars and make sure they are within the clipping plane
+
+Display passage of time (Vanessa)
 
 
 
