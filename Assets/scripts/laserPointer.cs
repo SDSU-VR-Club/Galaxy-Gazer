@@ -13,8 +13,12 @@ public class laserPointer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void LateUpdate () {
+        Matrix4x4 localToWorld = transform.worldToLocalMatrix;
+
+
+        
         lr.SetPosition(0, transform.position);
-        lr.SetPosition(1, transform.position + transform.forward * range);
+        lr.SetPosition(1, transform.position + transform.forward * 1000);
 	}
 }
