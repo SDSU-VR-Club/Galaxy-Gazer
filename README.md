@@ -32,28 +32,46 @@ This part is focused on having students determine which star is closest to other
 
 Task list for part 1:
 
-move the player to the center of the constellation once the player has completed it. (Cory)
+move the player to the center of the constellation once the player has completed it. 
+
+Add a Menu User Interface that can be used to quit the game. Change scenes. Restart the current scene. Turn Sound on/off.
+
+change text from "You Scored X" to "You missed X times"
+
+Move cass further away from the player
+
+Make Big Dipper more consistently have the same order of stars
+
+add lines between the stars eqivalent to their constallations
+
+Come up with a name for the project (Vanessa)
+
+display the name of a star when hovered over
+
+fix the scaling of the numbers that appear above stars when selected
+
+Think about ways to create a better tutorial, more intuitive controls, wordless explanation
 
 # Project part 2
 This part is focused on showing the ellipse like movement of stars viewed from earth to determine their distance from the player
 
 Task list for part 2:
 
-place a see through (tranparent) grid underneath the player at real-world ground height.
+create some kind of tutorial/explanation for the goal of part2
 
-place the sun prefab in the transparent transparent grid at the center of the players orbit
+slow down player orbit speed
 
-increase the transparency of the coneMat material that colors the angle tool indicator
+Get a better grid sprite for the part2 scene
 
-reposition angle text on the controller and make transparent
+increase the transparency of the coneMat material that colors the angle tool indicator at all angles
 
 prevent the star sprite from rotating at the top of the player vision
 
-fix left and right hand line pointers
+Display passage of time in months(Vanessa)
 
-position more stars and make sure they are within the clipping plane
+More evenly spread out stars
 
-Display passage of time (Vanessa)
+add a light trail to the player
 
 
 
