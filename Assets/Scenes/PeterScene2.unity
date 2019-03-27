@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78956f866a1055941b5d23da75f3d14f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textUI: {fileID: 1039787474}
+  textObject: {fileID: 1039787474}
 --- !u!1 &691185988
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +169,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691185988}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 10}
+  m_LocalPosition: {x: 0, y: 0, z: 15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1039787475}
@@ -178,7 +178,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -7.5, y: 10}
+  m_AnchoredPosition: {x: -7.5, y: 8}
   m_SizeDelta: {x: 35, y: 24.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &691185990
@@ -318,13 +318,13 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1039787474}
-  m_LocalRotation: {x: 0.078459114, y: 0, z: 0, w: 0.99691737}
+  m_LocalRotation: {x: 0.2588191, y: 0, z: 0, w: 0.9659258}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 691185989}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 9, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -352,7 +352,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Time passed:
 
-    x years, y days'
+    x days, y years'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
