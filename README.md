@@ -61,7 +61,7 @@ create some kind of tutorial/explanation for the goal of part2
 
 slow down player orbit speed
 
-Get a better grid sprite for the part2 scene
+~~Get a better grid sprite for the part2 scene~~ 
 
 increase the transparency of the coneMat material that colors the angle tool indicator at all angles
 
