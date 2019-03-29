@@ -48,8 +48,6 @@ Come up with a name for the project (Vanessa)
 
 display the name of a star when hovered over
 
-fix the scaling of the numbers that appear above stars when selected
-
 Think about ways to create a better tutorial, more intuitive controls, wordless explanation
 
 # Project part 2
@@ -60,8 +58,6 @@ Task list for part 2:
 create some kind of tutorial/explanation for the goal of part2
 
 slow down player orbit speed
-
-~~Get a better grid sprite for the part2 scene~~ 
 
 increase the transparency of the coneMat material that colors the angle tool indicator at all angles
 
