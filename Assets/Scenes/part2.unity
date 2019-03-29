@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0061949287, g: 0.00583182, b: 0.0064887716, a: 1}
+  m_IndirectSpecularColor: {r: 0.0061810985, g: 0.0058162296, b: 0.006474697, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -419,14 +419,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1855673861790972, guid: c43009bc07337664eb547a82db092c50, type: 3}
+      propertyPath: m_Name
+      value: AstronomyPlayer3DOF
+      objectReference: {fileID: 0}
     - target: {fileID: 4671685814910423109, guid: c43009bc07337664eb547a82db092c50,
         type: 3}
       propertyPath: near clip plane
       value: 0.05
-      objectReference: {fileID: 0}
-    - target: {fileID: 1855673861790972, guid: c43009bc07337664eb547a82db092c50, type: 3}
-      propertyPath: m_Name
-      value: AstronomyPlayer3DOF
       objectReference: {fileID: 0}
     - target: {fileID: 4561379060269996, guid: c43009bc07337664eb547a82db092c50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -505,7 +505,7 @@ PrefabInstance:
     - target: {fileID: 8855508567291605295, guid: c43009bc07337664eb547a82db092c50,
         type: 3}
       propertyPath: Speed
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 2071373414938296859, guid: c43009bc07337664eb547a82db092c50,
         type: 3}
