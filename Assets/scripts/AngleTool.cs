@@ -23,6 +23,7 @@ namespace Valve.VR.InteractionSystem
         int[] triangles;
         public MeshRenderer renderer;
         public MeshFilter meshFilter;
+        public TextMeshProUGUI InstructionsText;
         // Use this for initialization
         void Start() {
             myHand = GetComponent<Hand>();
@@ -55,6 +56,8 @@ namespace Valve.VR.InteractionSystem
 
             if (GetComponent<Hand>().grabPinchAction.GetLastStateDown(GetComponent<Hand>().handType))
             {
+                if(InstructionsText!=null)
+                InstructionsText.enabled = false;
                 FirstAnglePosition = transform.forward;
                 measuring = true;
                 renderer.enabled = true;
