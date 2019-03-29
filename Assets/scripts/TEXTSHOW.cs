@@ -51,7 +51,7 @@ public class TEXTSHOW : MonoBehaviour
         newMarker.SetActive(true);
        newMarker.GetComponent<settext>().settextmove(count.ToString(), colors[Random.Range(0, colors.Length)]);
         newMarker.transform.LookAt(FindObjectOfType<Camera>().transform.position);
-        newMarker.transform.localScale = transform.localScale*0.05f;
+        //newMarker.transform.localScale = transform.localScale*0.05f;
         count++;
      }
 }
