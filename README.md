@@ -46,8 +46,6 @@ add lines between the stars eqivalent to their constallations
 
 Come up with a name for the project (Vanessa)
 
-display the name of a star when hovered over (Kain)
-
 Think about ways to create a better tutorial, more intuitive controls, wordless explanation
 
 # Project part 2
