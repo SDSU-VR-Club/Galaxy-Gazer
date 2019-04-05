@@ -20,7 +20,7 @@ public class StarManager : MonoBehaviour {
     {
         FindObjectOfType<PlayerRotate>().playerRotate();
         var tmp = Instantiate(constellations[currentIndex++]);
-        SpawnPosition = FindObjectOfType<Camera>().transform;
+        SpawnPosition = Camera.main.transform;
         tmp.transform.position = SpawnPosition.position;
         currentConstellation = tmp;
     }
