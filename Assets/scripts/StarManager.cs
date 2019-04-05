@@ -12,6 +12,7 @@ public class StarManager : MonoBehaviour {
     public GameObject[] constellations;
     int currentIndex = 0;
     public Transform SpawnPosition;
+    public Vector3 onlyYpos; //position of head but only height, used for star spawning location
     // Use this for initialization
     void Start () {
        
@@ -21,7 +22,9 @@ public class StarManager : MonoBehaviour {
         FindObjectOfType<PlayerRotate>().playerRotate();
         var tmp = Instantiate(constellations[currentIndex++]);
         SpawnPosition = Camera.main.transform;
-        tmp.transform.position = SpawnPosition.position;
+        onlyYpos = new Vector3(0, SpawnPosition.position.y, 0);
+        tmp.transform.position = onlyYpos;
+        //tmp.transform.position = SpawnPosition.position;
         currentConstellation = tmp;
     }
 	// Update is called once per frame
@@ -43,7 +46,8 @@ public class StarManager : MonoBehaviour {
         StarBehavior closestStar=null;
         foreach(Transform a in stars)
         {
-            var dist = Vector3.Distance(SpawnPosition.position, a.position);
+            var dist = Vector3.Distance(onlyYpos, a.position);
+            //var dist = Vector3.Distance(SpawnPosition.position, a.position);
             if (dist < lowest)
             {
                 lowest = dist;
@@ -93,7 +97,8 @@ public class StarManager : MonoBehaviour {
         {
             var tmp = Instantiate(constellations[currentIndex++]);
             TEXTSHOW.count = 1;
-            tmp.transform.position = SpawnPosition.position;
+            tmp.transform.position = onlyYpos;
+            //tmp.transform.position = SpawnPosition.position;
             currentConstellation = tmp;
         }
     }
