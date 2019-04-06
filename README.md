@@ -36,8 +36,6 @@ move the player to the center of the constellation once the player has completed
 
 Add a Menu User Interface that can be used to quit the game. Change scenes. Restart the current scene. Turn Sound on/off.
 
-change text from "You Scored X" to "You missed X times"
-
 Move cass further away from the player
 
 Make Big Dipper more consistently have the same order of stars
@@ -55,19 +53,17 @@ Task list for part 2:
 
 create some kind of tutorial/explanation for the goal of part2
 
-slow down player orbit speed
+prevent the star sprite from rotating at the top of the player vision (low priority)
 
-increase the transparency of the coneMat material that colors the angle tool indicator at all angles
+Spread out 50 pseudorandom stars in at distances such that the apparent angle of their movement is between 3-30 degrees
 
-prevent the star sprite from rotating at the top of the player vision
+Add in the big dipper and casseopea colored differently from other stars
 
-Display passage of time in months(Vanessa)
+try a symmetrical star sprite
 
-More evenly spread out stars
+allow the player to 'draw' on the sky
 
-add a light trail to the player
-
-
+teach player how to use controllers for angle measurment, zoom, and drawing
 
 
 
