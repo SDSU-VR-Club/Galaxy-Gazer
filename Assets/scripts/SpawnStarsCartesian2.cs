@@ -90,6 +90,7 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
             //star color
             if (UseColor)
             {
+
                 if (tempStar.GetComponent<Renderer>().material.name == "Default-Material (Instance)")
                 {
                     Material starMaterial = new Material(Shader.Find("Standard"));
@@ -99,6 +100,7 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
                         ColorUtility.TryParseHtmlString("#" + row[HexColumn - 1], out hexcolor);
                         starMaterial.SetColor("_Color", hexcolor);
                         starMaterial.SetColor("_EmissionColor", hexcolor);
+                        tempStar.GetComponent<SpriteRenderer>().color = hexcolor;
                     }
                     else
                     {
@@ -116,6 +118,7 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
                         ColorUtility.TryParseHtmlString("#" + row[HexColumn - 1], out hexcolor);
                         tempStar.GetComponent<Renderer>().material.SetColor("_Color", hexcolor);
                         tempStar.GetComponent<Renderer>().material.SetColor("_EmissionColor", hexcolor);
+                        tempStar.GetComponent<SpriteRenderer>().color = hexcolor;
                     }
                     else
                     {
@@ -124,6 +127,7 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
                         float.TryParse(row[BcolorColumn - 1], out b);
                         tempStar.GetComponent<Renderer>().material.SetColor("_Color", new Color(r, g, b));
                         tempStar.GetComponent<Renderer>().material.SetColor("_EmissionColor", new Color(r, g, b));
+                        tempStar.GetComponent<SpriteRenderer>().color = new Color(r, g, b);
                     }
                 }
             }

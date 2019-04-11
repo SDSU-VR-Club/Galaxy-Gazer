@@ -11,7 +11,7 @@ public class randomStarSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print(Vector3.Distance(Vector3.zero, new Vector3(20, 32, -4)));
+       // print(Vector3.Distance(Vector3.zero, new Vector3(20, 32, -4)));
         for (int i = 0; i < starCount; i++)
         {
             var spawnloc = Random.onUnitSphere * Random.Range(minRange, maxRange);
