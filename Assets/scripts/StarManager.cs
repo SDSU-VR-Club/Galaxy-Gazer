@@ -15,7 +15,7 @@ public class StarManager : MonoBehaviour {
     public Vector3 onlyYpos; //position of head but only height, used for star spawning location
     // Use this for initialization
     void Start () {
-       
+        Begin();
 	}
 	public void Begin()
     {

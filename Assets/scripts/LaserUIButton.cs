@@ -14,7 +14,7 @@ public class LaserUIButton : MonoBehaviour
     [Header("Enable to go to a scene when the button is pressed")]
     public bool GoToScene;
     public string NextSceneName;
-
+    public GameObject DestroyOnLoad;
     void Start()
     {
         
@@ -40,8 +40,11 @@ public class LaserUIButton : MonoBehaviour
 
     public void goToScene()
     {
-        if(NextSceneName != null)
-        SceneManager.LoadScene(NextSceneName);
+        if (NextSceneName != null)
+        {
+            Destroy(DestroyOnLoad);
+            SceneManager.LoadScene(NextSceneName);
+        }
     }
 
     public void enable()
