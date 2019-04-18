@@ -54,7 +54,7 @@ namespace Valve.VR.InteractionSystem
             RaycastHit hit;
             if (GetComponent<Hand>().grabPinchAction.GetLastStateDown(GetComponent<Hand>().handType))
             {
-
+                if(lastSelectedObject!=null)
                 lastSelectedObject.GetComponent<StarBehavior>().select();
                 //if (Physics.Raycast(transform.position, transform.forward, out hit))
                 //{
