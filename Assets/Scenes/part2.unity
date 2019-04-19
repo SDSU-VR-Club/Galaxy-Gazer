@@ -494,6 +494,16 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 344538535728036136, guid: c43009bc07337664eb547a82db092c50,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 344538535728036136, guid: c43009bc07337664eb547a82db092c50,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 0.6
+      objectReference: {fileID: 0}
     - target: {fileID: 7559143813951298544, guid: c43009bc07337664eb547a82db092c50,
         type: 3}
       propertyPath: m_havePropertiesChanged
@@ -804,7 +814,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4843325816056104, guid: 8351f4682c06f2842bd3399c9c34bb26, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.2588191
+      value: -0.258819
       objectReference: {fileID: 0}
     - target: {fileID: 4843325816056104, guid: 8351f4682c06f2842bd3399c9c34bb26, type: 3}
       propertyPath: m_LocalRotation.y
@@ -816,7 +826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4843325816056104, guid: 8351f4682c06f2842bd3399c9c34bb26, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9659258
+      value: 0.9659259
       objectReference: {fileID: 0}
     - target: {fileID: 4843325816056104, guid: 8351f4682c06f2842bd3399c9c34bb26, type: 3}
       propertyPath: m_RootOrder
@@ -824,7 +834,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4843325816056104, guid: 8351f4682c06f2842bd3399c9c34bb26, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 30
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 4843325816056104, guid: 8351f4682c06f2842bd3399c9c34bb26, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -852,7 +862,17 @@ PrefabInstance:
     - target: {fileID: 8486175261356983248, guid: 8351f4682c06f2842bd3399c9c34bb26,
         type: 3}
       propertyPath: starScaleMultiplier
-      value: 0.2
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486175261356983248, guid: 8351f4682c06f2842bd3399c9c34bb26,
+        type: 3}
+      propertyPath: showText
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8486175261356983248, guid: 8351f4682c06f2842bd3399c9c34bb26,
+        type: 3}
+      propertyPath: nameScale
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8351f4682c06f2842bd3399c9c34bb26, type: 3}

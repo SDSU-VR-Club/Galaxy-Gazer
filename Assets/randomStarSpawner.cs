@@ -20,7 +20,7 @@ public class randomStarSpawner : MonoBehaviour
             var spawnloc = Random.onUnitSphere * Random.Range(minRange, maxRange);
             Instantiate(starPrefab, spawnloc, Quaternion.identity,emptyHolder.transform);
         }
-        PrefabUtility.SaveAsPrefabAsset(emptyHolder,Application.dataPath+"/prefabs/"+emptyHolder.name+".prefab");
+        //PrefabUtility.SaveAsPrefabAsset(emptyHolder,Application.dataPath+"/prefabs/"+emptyHolder.name+".prefab");
     }
 
     // Update is called once per frame

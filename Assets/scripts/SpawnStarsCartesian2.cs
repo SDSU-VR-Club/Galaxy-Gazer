@@ -1,5 +1,6 @@
 ﻿﻿using UnityEngine;
 using System.Collections;
+using TMPro;
 //kain kode
 //[ExecuteInEditMode]
 public class SpawnStarsCartesian2 : MonoBehaviour {
@@ -37,7 +38,8 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
     string[] data;
     public float starScaleMultiplier;
     public float distanceExagerationMultiplier;
-
+    public bool showText;
+    public float nameScale = 1f;
         void Start ()
 	{
 
@@ -79,13 +81,17 @@ public class SpawnStarsCartesian2 : MonoBehaviour {
             if (!SetDiameter)
             {
                 float.TryParse(row[DiamaterColumn - 1], out d);
-                tempStar.transform.localScale = new Vector3(d, d, d) * starScaleMultiplier;
+                //tempStar.transform.localScale = new Vector3(d, d, d) * starScaleMultiplier;
+                tempStar.transform.localScale *=  starScaleMultiplier;
             }
             else
             {
                 tempStar.transform.localScale = new Vector3(Diameter, Diameter, Diameter) * starScaleMultiplier;
             }
-
+            if (showText)
+            {
+                tempStar.GetComponentInChildren<TextMeshProUGUI>().color = new Color(1, 1, 1);
+            }
 
             //star color
             if (UseColor)

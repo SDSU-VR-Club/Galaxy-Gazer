@@ -86,7 +86,7 @@ TrailRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339055033768952}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -242,7 +242,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9251e91cb21b3244802556b5c5c2aec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scale: 0.1
+  distanceExponent: 1
   hit: {fileID: 0}
 --- !u!114 &6531832996427435240
 MonoBehaviour:
@@ -256,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fb9d4be8910911409b856c9eeb3b177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mult: 0.0025
+  mult: 0.1
   mindist: 0
 --- !u!114 &8645437705645756211
 MonoBehaviour:

@@ -96,6 +96,7 @@ public class StarManager : MonoBehaviour {
         center.position /= currentConstellation.transform.childCount;
 
         currentConstellation.transform.parent = center;
+        GameObject.Find("Sun").transform.parent = center;
     }
     public void nextConstellation()
     {
@@ -113,6 +114,8 @@ public class StarManager : MonoBehaviour {
         goToZero();
         yield return new WaitForSeconds(7);
         movingIn = false;
+        GameObject.Find("Sun").transform.parent = null;
+        GameObject.Find("Sun").transform.position = Vector3.zero;
         Destroy(currentConstellation);
         Destroy(center.gameObject);
         if (currentIndex == constellations.Length)
