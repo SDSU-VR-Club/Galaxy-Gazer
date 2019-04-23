@@ -285,28 +285,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &124322023 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1989434535860512, guid: c43009bc07337664eb547a82db092c50,
-    type: 3}
-  m_PrefabInstance: {fileID: 1199831492}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &124322032
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124322023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5034991623301db48b75c42df0885d6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trailGenerator: {fileID: 1378544911545698544, guid: f91295ec32d8afc4da8d2ea037312146,
-    type: 3}
-  drawingTip: {fileID: 0}
-  distance: 90000
 --- !u!1 &504715721
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +414,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6959982934753581224, guid: c43009bc07337664eb547a82db092c50,
+        type: 3}
+      propertyPath: stars
+      value: 
+      objectReference: {fileID: 1477990523}
+    - target: {fileID: 760706563601963254, guid: c43009bc07337664eb547a82db092c50,
+        type: 3}
+      propertyPath: stars
+      value: 
+      objectReference: {fileID: 1477990523}
     - target: {fileID: 1855673861790972, guid: c43009bc07337664eb547a82db092c50, type: 3}
       propertyPath: m_Name
       value: AstronomyPlayer3DOF
@@ -767,28 +755,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1551074418 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1599942763921542, guid: c43009bc07337664eb547a82db092c50,
-    type: 3}
-  m_PrefabInstance: {fileID: 1199831492}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1551074427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1551074418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5034991623301db48b75c42df0885d6f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  trailGenerator: {fileID: 1378544911545698544, guid: f91295ec32d8afc4da8d2ea037312146,
-    type: 3}
-  drawingTip: {fileID: 0}
-  distance: 90000
 --- !u!1001 &1678146974
 PrefabInstance:
   m_ObjectHideFlags: 0
