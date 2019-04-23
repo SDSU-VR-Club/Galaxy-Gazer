@@ -14,6 +14,8 @@ public class LaserUIButton : MonoBehaviour
     [Header("Enable to go to a scene when the button is pressed")]
     public bool GoToScene;
     public string NextSceneName;
+    [Header("Enable to go to exit program when the button is pressed")]
+    public bool ExitProgram;
     public GameObject DestroyOnLoad;
     void Start()
     {
@@ -25,7 +27,7 @@ public class LaserUIButton : MonoBehaviour
         
     }
 
-    public void Press()
+    public virtual void Press()
     {
         if (GoToScene)
             goToScene();
@@ -35,6 +37,9 @@ public class LaserUIButton : MonoBehaviour
 
         if (DisableThings)
             disable();
+
+        if (ExitProgram)
+            Application.Quit();
 
     }
 

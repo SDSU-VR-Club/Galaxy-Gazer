@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 //see Carter for more info
 public class StarManager : MonoBehaviour {
     //poulated on the first selection with all stars in the scene
@@ -14,6 +15,10 @@ public class StarManager : MonoBehaviour {
     public Transform SpawnPosition;
     public Vector3 onlyYpos; //position of head but only height, used for star spawning location
     // Use this for initialization
+    Transform center;
+    bool movingIn;
+    Vector3 target;
+    public GameObject continueButton;
     void Start () {
         Begin();
 	}
@@ -29,8 +34,11 @@ public class StarManager : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (movingIn)
+        {
+            center.position = Vector3.Lerp(center.position,target , 0.005f);
+        }
+    }
 
     public void checkClosest(StarBehavior starToCheck)
     {
@@ -73,7 +81,25 @@ public class StarManager : MonoBehaviour {
         starToCheck.fail();
         badSound.Play();
         score++;
+       
+    }
+    public void goToZero()
+    {
+        foreach(ScaleByDistance a in currentConstellation.GetComponentsInChildren<ScaleByDistance>())
+        {
+            a.enabled = false;
+            a.gameObject.GetComponentInChildren<TextMeshPro>().enabled = false;
+        }
+        movingIn = true;
+        target = GameObject.FindGameObjectWithTag("MainCamera").transform.position;
+        center = new GameObject().transform;
+        foreach (Transform a in currentConstellation.transform) {
+            center.position += a.position;
+                }
+        center.position /= currentConstellation.transform.childCount;
 
+        currentConstellation.transform.parent = center;
+        GameObject.Find("Sun").transform.parent = center;
     }
     public void nextConstellation()
     {
@@ -85,9 +111,20 @@ public class StarManager : MonoBehaviour {
     private IEnumerator cycleConstellation()
     {
         score = 0;
-        Destroy(currentConstellation);
+        
         stars = null;
         yield return new WaitForSeconds(3);
+        goToZero();
+        yield return new WaitForSeconds(7);
+        Instantiate(continueButton,center);
+    }
+    public void forceChangeConstellation()
+    {
+        movingIn = false;
+        GameObject.Find("Sun").transform.parent = null;
+        GameObject.Find("Sun").transform.position = Vector3.zero;
+        Destroy(currentConstellation);
+        Destroy(center.gameObject);
         if (currentIndex == constellations.Length)
         {
             Destroy(FindObjectOfType<PlayerRotate>().gameObject);
