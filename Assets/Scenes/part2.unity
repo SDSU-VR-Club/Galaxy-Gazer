@@ -563,6 +563,16 @@ PrefabInstance:
       propertyPath: Speed
       value: -0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 1787900477723684847, guid: c43009bc07337664eb547a82db092c50,
+        type: 3}
+      propertyPath: DecimalPlaces
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6369558956182796499, guid: c43009bc07337664eb547a82db092c50,
+        type: 3}
+      propertyPath: DecimalPlaces
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c43009bc07337664eb547a82db092c50, type: 3}
 --- !u!1001 &1262667148
