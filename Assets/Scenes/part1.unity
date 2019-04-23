@@ -314,6 +314,8 @@ MonoBehaviour:
   - {fileID: 1596109804573456, guid: 40182ba62068c44448cf388c68accb45, type: 3}
   SpawnPosition: {fileID: 0}
   onlyYpos: {x: 0, y: 0, z: 0}
+  continueButton: {fileID: 6005727766979319982, guid: e06f8e3776efc6444a496025b8ad1230,
+    type: 3}
 --- !u!4 &252398424
 Transform:
   m_ObjectHideFlags: 0

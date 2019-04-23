@@ -27,7 +27,7 @@ public class LaserUIButton : MonoBehaviour
         
     }
 
-    public void Press()
+    public virtual void Press()
     {
         if (GoToScene)
             goToScene();

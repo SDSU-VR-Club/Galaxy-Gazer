@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 //see Carter for more info
 public class StarManager : MonoBehaviour {
     //poulated on the first selection with all stars in the scene
@@ -17,6 +18,7 @@ public class StarManager : MonoBehaviour {
     Transform center;
     bool movingIn;
     Vector3 target;
+    public GameObject continueButton;
     void Start () {
         Begin();
 	}
@@ -86,6 +88,7 @@ public class StarManager : MonoBehaviour {
         foreach(ScaleByDistance a in currentConstellation.GetComponentsInChildren<ScaleByDistance>())
         {
             a.enabled = false;
+            a.gameObject.GetComponentInChildren<TextMeshPro>().enabled = false;
         }
         movingIn = true;
         target = GameObject.FindGameObjectWithTag("MainCamera").transform.position;
@@ -113,6 +116,10 @@ public class StarManager : MonoBehaviour {
         yield return new WaitForSeconds(3);
         goToZero();
         yield return new WaitForSeconds(7);
+        Instantiate(continueButton,center);
+    }
+    public void forceChangeConstellation()
+    {
         movingIn = false;
         GameObject.Find("Sun").transform.parent = null;
         GameObject.Find("Sun").transform.position = Vector3.zero;
