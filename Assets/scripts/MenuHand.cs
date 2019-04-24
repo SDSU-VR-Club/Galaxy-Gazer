@@ -30,7 +30,7 @@ namespace Valve.VR.InteractionSystem
         void LoadMenuScene()
         {
             Destroy(destryOnLoad);
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene("MenuScene");
         }
     }
 }
