@@ -727,6 +727,7 @@ GameObject:
   - component: {fileID: 5261919056697406734}
   - component: {fileID: 7302109955547881336}
   - component: {fileID: 6959982934753581224}
+  - component: {fileID: 1869829485429012323}
   m_Layer: 26
   m_Name: RightHand
   m_TagString: Untagged
@@ -1053,6 +1054,23 @@ MonoBehaviour:
     type: 3}
   drawingTip: {fileID: 0}
   distance: 90000
+  stars: {fileID: 0}
+--- !u!114 &1869829485429012323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599942763921542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708d880686017e478e108aebcfcb0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButton:
+    actionPath: /actions/default/in/showMenu
+    needsReinit: 0
+  destryOnLoad: {fileID: 1855673861790972}
 --- !u!1 &1623578366668574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1302,7 +1320,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 385ca99bcb3007d4ea51dcc50eb519a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 0.3
+  Speed: -0.3
   Xwidth: 40
   Zwidth: 40
 --- !u!114 &6390011226293444717
@@ -1502,6 +1520,8 @@ GameObject:
   - component: {fileID: 885370804449325824}
   - component: {fileID: 8195822044563943969}
   - component: {fileID: 760706563601963254}
+  - component: {fileID: 2919331175716461228}
+  - component: {fileID: 38844727152267404}
   m_Layer: 26
   m_Name: LeftHand
   m_TagString: Untagged
@@ -1828,6 +1848,39 @@ MonoBehaviour:
     type: 3}
   drawingTip: {fileID: 0}
   distance: 90000
+  stars: {fileID: 0}
+--- !u!114 &2919331175716461228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989434535860512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708d880686017e478e108aebcfcb0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButton:
+    actionPath: /actions/default/in/showMenu
+    needsReinit: 0
+  destryOnLoad: {fileID: 1855673861790972}
+--- !u!114 &38844727152267404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989434535860512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708d880686017e478e108aebcfcb0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButton:
+    actionPath: 
+    needsReinit: 0
+  destryOnLoad: {fileID: 0}
 --- !u!1 &1998021996182224
 GameObject:
   m_ObjectHideFlags: 0

@@ -414,6 +414,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 38844727152267404, guid: c43009bc07337664eb547a82db092c50,
+        type: 3}
+      propertyPath: menuButton.actionPath
+      value: /actions/default/in/showMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 1855673861790972, guid: c43009bc07337664eb547a82db092c50, type: 3}
+      propertyPath: m_Name
+      value: AstronomyPlayer3DOF
+      objectReference: {fileID: 0}
     - target: {fileID: 6959982934753581224, guid: c43009bc07337664eb547a82db092c50,
         type: 3}
       propertyPath: stars
@@ -424,10 +433,6 @@ PrefabInstance:
       propertyPath: stars
       value: 
       objectReference: {fileID: 1477990523}
-    - target: {fileID: 1855673861790972, guid: c43009bc07337664eb547a82db092c50, type: 3}
-      propertyPath: m_Name
-      value: AstronomyPlayer3DOF
-      objectReference: {fileID: 0}
     - target: {fileID: 4561379060269996, guid: c43009bc07337664eb547a82db092c50, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -572,6 +577,16 @@ PrefabInstance:
         type: 3}
       propertyPath: DecimalPlaces
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114497861519917198, guid: c43009bc07337664eb547a82db092c50,
+        type: 3}
+      propertyPath: uiInteractAction.actionPath
+      value: /actions/default/in/showMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 114497861519917198, guid: c43009bc07337664eb547a82db092c50,
+        type: 3}
+      propertyPath: uiInteractAction.needsReinit
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c43009bc07337664eb547a82db092c50, type: 3}

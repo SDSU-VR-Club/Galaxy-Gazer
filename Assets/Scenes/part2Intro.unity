@@ -125,6 +125,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1855673861790972, guid: c43009bc07337664eb547a82db092c50, type: 3}
+      propertyPath: m_Name
+      value: AstronomyPlayer3DOF
+      objectReference: {fileID: 0}
     - target: {fileID: 6959982934753581224, guid: c43009bc07337664eb547a82db092c50,
         type: 3}
       propertyPath: m_Enabled
@@ -134,10 +138,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1855673861790972, guid: c43009bc07337664eb547a82db092c50, type: 3}
-      propertyPath: m_Name
-      value: AstronomyPlayer3DOF
       objectReference: {fileID: 0}
     - target: {fileID: 4561379060269996, guid: c43009bc07337664eb547a82db092c50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -359,8 +359,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 'Excellent Work!
 
-    Now notice how the big white stars move relative to the rest of the galaxy while
-    you orbit the earth'
+    Now notice how the stars in the sky don''t seem to move relative to each other'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -429,12 +428,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 717557361}
-    characterCount: 116
+    characterCount: 93
     spriteCount: 0
-    spaceCount: 21
-    wordCount: 22
+    spaceCount: 17
+    wordCount: 18
     linkCount: 0
-    lineCount: 5
+    lineCount: 4
     pageCount: 1
     materialCount: 1
   m_havePropertiesChanged: 0

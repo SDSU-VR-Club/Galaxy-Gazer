@@ -24,6 +24,7 @@ public class StarManager : MonoBehaviour {
 	}
 	public void Begin()
     {
+        TEXTSHOW.count = 1;
         //FindObjectOfType<PlayerRotate>().playerRotate();
         var tmp = Instantiate(constellations[currentIndex++]);
         SpawnPosition = Camera.main.transform;
@@ -120,6 +121,7 @@ public class StarManager : MonoBehaviour {
     }
     public void forceChangeConstellation()
     {
+        print("change");
         movingIn = false;
         GameObject.Find("Sun").transform.parent = null;
         GameObject.Find("Sun").transform.position = Vector3.zero;
@@ -127,6 +129,7 @@ public class StarManager : MonoBehaviour {
         Destroy(center.gameObject);
         if (currentIndex == constellations.Length)
         {
+            TEXTSHOW.count = 1;
             Destroy(FindObjectOfType<PlayerRotate>().gameObject);
             Application.LoadLevel(Application.loadedLevel + 1);
         }

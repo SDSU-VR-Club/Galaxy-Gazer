@@ -36,6 +36,7 @@ namespace Valve.VR.InteractionSystem
             }
             if (GetComponent<Hand>().grabPinchAction.GetLastStateUp(GetComponent<Hand>().handType))
             {
+                if(drawingTip!=null)
                 drawingTip.transform.parent = null;
                 foreach (TextMeshProUGUI a in stars.GetComponentsInChildren<TextMeshProUGUI>())
                 {

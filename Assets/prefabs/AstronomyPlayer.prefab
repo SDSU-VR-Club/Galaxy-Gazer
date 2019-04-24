@@ -829,6 +829,7 @@ GameObject:
   - component: {fileID: 5164984871817436644}
   - component: {fileID: 114111910526734592}
   - component: {fileID: 1878207544}
+  - component: {fileID: 2170346623459840580}
   m_Layer: 26
   m_Name: RightHand
   m_TagString: Untagged
@@ -1090,6 +1091,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170693e919cf26f47ad18cb8ed44bd80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2170346623459840580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1599942763921542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708d880686017e478e108aebcfcb0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButton:
+    actionPath: /actions/default/in/showMenu
+    needsReinit: 0
+  destryOnLoad: {fileID: 1855673861790972}
 --- !u!1 &1623578366668574
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,8 +1306,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a476662585908634fb5a7a5031f0787c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  constToRotateTo: 0
-  player: {fileID: 0}
 --- !u!1 &1871193826472870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,6 +1487,7 @@ GameObject:
   - component: {fileID: 1439415105226820131}
   - component: {fileID: 114172662056163590}
   - component: {fileID: 2029564907}
+  - component: {fileID: 7450845392677377409}
   m_Layer: 26
   m_Name: LeftHand
   m_TagString: Untagged
@@ -1732,6 +1748,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 170693e919cf26f47ad18cb8ed44bd80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7450845392677377409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1989434535860512}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c708d880686017e478e108aebcfcb0f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButton:
+    actionPath: /actions/default/in/showMenu
+    needsReinit: 0
+  destryOnLoad: {fileID: 1855673861790972}
 --- !u!1 &1998021996182224
 GameObject:
   m_ObjectHideFlags: 0
