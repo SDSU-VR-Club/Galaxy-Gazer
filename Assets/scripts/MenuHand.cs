@@ -21,11 +21,37 @@ namespace Valve.VR.InteractionSystem
         void Update()
         {
 
-            if (menuButton.GetLastStateDown(GetComponent<Hand>().handType))
+            if (menuButton.GetLastStateDown(GetComponent<Hand>().handType)||Input.GetKeyDown(KeyCode.M))
             {
+                Destroy(destryOnLoad);
                 LoadMenuScene();
             }
-            
+            if ( Input.GetKeyDown(KeyCode.Alpha1))
+            {
+                Destroy(destryOnLoad);
+                SceneManager.LoadScene(0);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha2))
+            {
+                Destroy(destryOnLoad);
+                SceneManager.LoadScene(1);
+            }
+            if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                Destroy(destryOnLoad);
+                SceneManager.LoadScene(2);
+            }
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                Application.Quit();
+            }
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Destroy(destryOnLoad);
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+
+            }
+
         }
         void LoadMenuScene()
         {
